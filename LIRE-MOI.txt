@@ -1,0 +1,31 @@
+TakoLogs — archive du site
+==========================
+
+Contenu
+-------
+Tout le site actuel : encyclopédie des substances, comparateur, effets,
+neurotransmetteurs, échelle des dommages, réduction des risques, journal
+d’expériences, connexion, profil, thème et logo.
+
+Comment l’utiliser
+------------------
+1. Décompressez ce zip.
+2. Vous obtenez un dossier « TakoLogs ».
+3. Vous pouvez le copier, l’archiver, ou le déposer chez votre hébergeur.
+
+Important pour le FTP
+---------------------
+TakoLogs n’est pas un site HTML statique (comme un WordPress déjà généré).
+Il contient un journal privé et une connexion : ces parties ont besoin d’un
+hébergement capable d’exécuter l’application (Node), pas seulement d’un
+dossier glissé dans FileZilla.
+
+Les pages encyclopédie (substances, comparateur, effets, etc.) et les
+données (src/data/) sont bien dans cette archive.
+
+Dossiers utiles
+---------------
+src/            code du site
+src/data/       base des substances, catégories, neurotransmetteurs
+public/         favicon, icônes, images
+migrations/     structure du journal

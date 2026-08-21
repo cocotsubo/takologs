@@ -1,0 +1,48 @@
+{
+  "tips": [
+    {
+      "title": "Test your products",
+      "text": "Use a reagent kit (Ehrlich, Marquis, Mandelin) to identify the substance and catch dangerous adulterants."
+    },
+    {
+      "title": "Hydrate, but not too much",
+      "text": "~500 ml of water per hour if you dance. Too much plain water can cause hyponatraemia (MDMA)."
+    },
+    {
+      "title": "Set & setting",
+      "text": "Mindset and environment largely shape the experience. Choose a safe place and people you trust."
+    },
+    {
+      "title": "Don’t mix depressants",
+      "text": "Alcohol + benzos/opioids/GHB = respiratory depression. It’s the #1 cause of overdose."
+    }
+  ],
+  "groups": [
+    {
+      "title": "Emergencies & poisoning",
+      "items": [
+        { "name": "Emergency services", "desc": "Life-threatening medical emergency", "phone": "112 / 911 / 999", "hours": "24/7" },
+        { "name": "EU emergency number", "desc": "General emergencies in Europe", "phone": "112", "hours": "24/7" },
+        { "name": "Poison control", "desc": "Intoxication, overdose, bad trip", "phone": "Local poison centre", "hours": "24/7" },
+        { "name": "SAMU (France)", "desc": "French medical emergency", "phone": "15", "hours": "24/7" }
+      ]
+    },
+    {
+      "title": "Help & listening",
+      "items": [
+        { "name": "FRANK (UK)", "desc": "Honest drugs advice", "phone": "0300 123 6600", "url": "https://www.talktofrank.com", "hours": "24/7" },
+        { "name": "SAMHSA (US)", "desc": "Substance use helpline", "phone": "1-800-662-HELP", "url": "https://www.samhsa.gov", "hours": "24/7" },
+        { "name": "Drogues Info Service", "desc": "Info, advice, referral (France)", "phone": "0 800 23 13 36", "url": "https://www.drogues-info-service.fr", "hours": "7 days, 8am–8pm" },
+        { "name": "IASP", "desc": "Find a local suicide helpline", "url": "https://www.iasp.info/suicidalthoughts/", "hours": "Directory" }
+      ]
+    },
+    {
+      "title": "Harm reduction",
+      "items": [
+        { "name": "DanceSafe", "desc": "Peer harm reduction and reagent testing", "url": "https://dancesafe.org" },
+        { "name": "Energy Control", "desc": "Drug checking and harm-reduction info", "url": "https://energycontrol.org" },
+        { "name": "PsychonautWiki", "desc": "Dosages, durations, interactions", "url": "https://psychonautwiki.org" }
+      ]
+    }
+  ]
+}

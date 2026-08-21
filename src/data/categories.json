@@ -1,0 +1,62 @@
+{
+  "psychedelic": {
+    "label": "Psychédélique",
+    "color": "#c45a9a",
+    "tint": "rgba(196,90,154,0.18)",
+    "emoji": "🌀"
+  },
+  "stimulant": {
+    "label": "Stimulant",
+    "color": "#d4a017",
+    "tint": "rgba(212,160,23,0.18)",
+    "emoji": "⚡"
+  },
+  "depressant": {
+    "label": "Dépresseur",
+    "color": "#4a8f7a",
+    "tint": "rgba(74,143,122,0.18)",
+    "emoji": "🌙"
+  },
+  "dissociative": {
+    "label": "Dissociatif",
+    "color": "#5b74d4",
+    "tint": "rgba(91,116,212,0.2)",
+    "emoji": "🧊"
+  },
+  "opioid": {
+    "label": "Opioïde",
+    "color": "#c45c3a",
+    "tint": "rgba(196,92,58,0.18)",
+    "emoji": "💊"
+  },
+  "cannabinoid": {
+    "label": "Cannabinoïde",
+    "color": "#5d9a3a",
+    "tint": "rgba(93,154,58,0.2)",
+    "emoji": "🌿"
+  },
+  "empathogen": {
+    "label": "Empathogène",
+    "color": "#e0568c",
+    "tint": "rgba(224,86,140,0.2)",
+    "emoji": "💗"
+  },
+  "deliriant": {
+    "label": "Délirant",
+    "color": "#8a5a2a",
+    "tint": "rgba(138,90,42,0.2)",
+    "emoji": "👽"
+  },
+  "nootropic": {
+    "label": "Nootropique",
+    "color": "#3d8ec9",
+    "tint": "rgba(61,142,201,0.18)",
+    "emoji": "🧠"
+  },
+  "misc": {
+    "label": "Divers",
+    "color": "#9a7a4a",
+    "tint": "rgba(154,122,74,0.18)",
+    "emoji": "🔬"
+  }
+}

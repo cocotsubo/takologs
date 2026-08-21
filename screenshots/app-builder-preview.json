@@ -1,0 +1,39 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "TakoLogs — Savoir, réduction des risques & journal",
+      "hasCanvas": true,
+      "bodyTextLen": 2063,
+      "bodyTextHash": "027f0b549ae8c9b728d8200a2a92cd49d552e278795a9eddb3723dc9110f95bb",
+      "bodyTextPrefix": "TakoLogs Accueil Substances Logs Plus Encyclopédie · Journal Les",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "TakoLogs — Savoir, réduction des risques & journal",
+      "hasCanvas": true,
+      "bodyTextLen": 2062,
+      "bodyTextHash": "796e33bed78c09f2e359ed8b549205f07446af594b0a570298f8c1d4579860d8",
+      "bodyTextPrefix": "TakoLogs Encyclopédie · Journal Les substances, en clair. Dosage",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [
+    "BRAND WARNING: this looks like a game/canvas app but src/lib/og/site.json is missing \"type\": \"x:game\". X uses og:type=x:game to present the unfurl as a game card — set it in /workspace/src/lib/og/site.json per /workspace/.grok/skills/og/SKILL.md. Do not invent x:type or overload twitter:card as the game signal.",
+    "BRAND WARNING: this looks like a game/canvas app but /workspace/public/x-banner.jpg is missing. Games need a 50:11 X feed card (1200×264 JPEG) at public/x-banner.jpg — open /workspace/.grok/skills/og/SKILL.md and finish the brand-asset pass."
+  ],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
