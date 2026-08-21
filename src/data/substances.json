@@ -24456,5 +24456,1721 @@
     ],
     "color": "#a87c45",
     "emoji": "🔬"
+  },
+  {
+    "slug": "paracetamol",
+    "name": "Paracétamol",
+    "aliases": [
+      "Acetaminophen",
+      "Doliprane",
+      "Dafalgan",
+      "Tylenol"
+    ],
+    "category": "medication",
+    "chemicalClass": "Anilide",
+    "psychoactiveClass": "Antalgique / antipyrétique",
+    "summary": "Antalgique et antipyrétique de référence. Pas d’effet psychoactif aux doses thérapeutiques. Hépatotoxicité majeure au-delà de 4 g/j (souvent moins avec l’alcool).",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 250,
+        "light": 500,
+        "common": 1000,
+        "strong": 1500,
+        "heavy": 2000,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        15,
+        45
+      ],
+      "peakMin": [
+        30,
+        90
+      ],
+      "totalMin": [
+        240,
+        360
+      ],
+      "afterMin": [
+        120,
+        240
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Soulagement de la douleur",
+        "Baisse de la fièvre"
+      ],
+      "neutral": [
+        "Peu d’effet subjectif"
+      ],
+      "negative": [
+        "Lésion hépatique (surdose)",
+        "Nausées"
+      ]
+    },
+    "neurotransmitters": [],
+    "interactions": {
+      "dangerous": [
+        "Alcool (hépatotoxicité)",
+        "ISRS (rare, sodium)"
+      ],
+      "caution": [
+        "Warfarine"
+      ]
+    },
+    "harm": {
+      "physical": 55,
+      "dependence": 5,
+      "social": 5
+    },
+    "riskNotes": [
+      "Ne jamais dépasser 4 g/24 h chez l’adulte.",
+      "L’antidote (N-acétylcystéine) doit être donné tôt.",
+      "L’alcool et le jeûne abaissent le seuil toxique."
+    ],
+    "color": "#5b8a9a",
+    "emoji": "💊"
+  },
+  {
+    "slug": "cetirizine",
+    "name": "Cétirizine",
+    "aliases": [
+      "Zyrtec",
+      "Virlix",
+      "Reactine"
+    ],
+    "category": "medication",
+    "chemicalClass": "Pipérazine (antihistaminique H1)",
+    "psychoactiveClass": "Antihistaminique",
+    "summary": "Antihistaminique H1 de 2e génération. Peu sédatif aux doses allergie. À haute dose : somnolence, rarement effets anticholinergiques.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 2.5,
+        "light": 5,
+        "common": 10,
+        "strong": 20,
+        "heavy": 40,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        20,
+        60
+      ],
+      "peakMin": [
+        60,
+        240
+      ],
+      "totalMin": [
+        1440,
+        1440
+      ],
+      "afterMin": [
+        240,
+        720
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Soulagement allergie",
+        "Léger calme"
+      ],
+      "neutral": [
+        "Sécheresse buccale"
+      ],
+      "negative": [
+        "Somnolence",
+        "Céphalées",
+        "Rétention urinaire (rare)"
+      ]
+    },
+    "neurotransmitters": [
+      "histamine"
+    ],
+    "interactions": {
+      "dangerous": [],
+      "caution": [
+        "Alcool",
+        "Dépresseurs"
+      ]
+    },
+    "harm": {
+      "physical": 10,
+      "dependence": 5,
+      "social": 5
+    },
+    "riskNotes": [
+      "Éviter de conduire si somnolence.",
+      "Ajuster en insuffisance rénale."
+    ],
+    "color": "#5b9ad4",
+    "emoji": "🌼"
+  },
+  {
+    "slug": "oxazepam",
+    "name": "Oxazépam",
+    "aliases": [
+      "Seresta",
+      "Serax"
+    ],
+    "category": "depressant",
+    "chemicalClass": "Benzodiazépine",
+    "psychoactiveClass": "Dépresseur / anxiolytique",
+    "summary": "Benzodiazépine à demi-vie courte/intermédiaire (Seresta). Anxiolyse, sédation. Métabolite du diazépam. Dépendance et sevrage dangereux.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 5,
+        "light": 10,
+        "common": 15,
+        "strong": 30,
+        "heavy": 60,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        30,
+        60
+      ],
+      "peakMin": [
+        60,
+        180
+      ],
+      "totalMin": [
+        360,
+        720
+      ],
+      "afterMin": [
+        360,
+        720
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Anxiolyse",
+        "Détente",
+        "Endormissement"
+      ],
+      "neutral": [
+        "Somnolence",
+        "Ralentissement"
+      ],
+      "negative": [
+        "Amnésie",
+        "Dépendance",
+        "Sevrage (convulsions)"
+      ]
+    },
+    "neurotransmitters": [
+      "gaba"
+    ],
+    "interactions": {
+      "dangerous": [
+        "Alcool",
+        "Opioïdes",
+        "GHB"
+      ],
+      "caution": [
+        "Autres benzodiazépines"
+      ]
+    },
+    "harm": {
+      "physical": 40,
+      "dependence": 65,
+      "social": 35
+    },
+    "riskNotes": [
+      "Ne jamais stopper brutalement un usage régulier.",
+      "Association alcool/opioïdes : dépression respiratoire."
+    ],
+    "color": "#4a8f7a",
+    "emoji": "💊"
+  },
+  {
+    "slug": "amisulpride",
+    "name": "Amisulpride",
+    "aliases": [
+      "Solian"
+    ],
+    "category": "medication",
+    "chemicalClass": "Benzamide substitué",
+    "psychoactiveClass": "Neuroleptique atypique",
+    "summary": "Antipsychotique atypique (D2/D3). Aux faibles doses : désinhibition/antidépresseur ; aux doses psychose : antipsychotique. Allongement QT, hyperprolactinémie.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 25,
+        "light": 50,
+        "common": 200,
+        "strong": 400,
+        "heavy": 800,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        60,
+        180
+      ],
+      "peakMin": [
+        180,
+        360
+      ],
+      "totalMin": [
+        1440,
+        1440
+      ],
+      "afterMin": [
+        720,
+        1440
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Réduction des symptômes psychotiques",
+        "Humeur (faible dose)"
+      ],
+      "neutral": [
+        "Sédation légère"
+      ],
+      "negative": [
+        "Akathisie",
+        "Hyperprolactinémie",
+        "Allongement QT"
+      ]
+    },
+    "neurotransmitters": [
+      "dopamine"
+    ],
+    "interactions": {
+      "dangerous": [
+        "Médicaments allongeant le QT",
+        "Alcool"
+      ],
+      "caution": [
+        "L-DOPA",
+        "Autres neuroleptiques"
+      ]
+    },
+    "harm": {
+      "physical": 45,
+      "dependence": 10,
+      "social": 20
+    },
+    "riskNotes": [
+      "ECG si facteurs de risque cardiaques.",
+      "Ne pas arrêter brutalement un traitement prescrit."
+    ],
+    "color": "#6b5b9a",
+    "emoji": "🧠"
+  },
+  {
+    "slug": "sertraline",
+    "name": "Sertraline",
+    "aliases": [
+      "Zoloft",
+      "Serlain"
+    ],
+    "category": "medication",
+    "chemicalClass": "ISRS",
+    "psychoactiveClass": "Antidépresseur",
+    "summary": "ISRS largement prescrit. Délai d’action 2–6 semaines. Syndrome de sevrage à l’arrêt brutal. Interaction IMAO : syndrome sérotoninergique.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 12.5,
+        "light": 25,
+        "common": 50,
+        "strong": 100,
+        "heavy": 200,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        240,
+        20160
+      ],
+      "peakMin": [
+        20160,
+        40320
+      ],
+      "totalMin": [
+        20160,
+        40320
+      ],
+      "afterMin": [
+        2880,
+        10080
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Amélioration de l’humeur (retardée)",
+        "Baisse de l’anxiété"
+      ],
+      "neutral": [
+        "Nausées transitoires",
+        "Insomnie ou somnolence"
+      ],
+      "negative": [
+        "Baisse de libido",
+        "Sevrage (zaps)",
+        "Syndrome sérotoninergique (IMAO)"
+      ]
+    },
+    "neurotransmitters": [
+      "serotonin"
+    ],
+    "interactions": {
+      "dangerous": [
+        "IMAO",
+        "Tramadol",
+        "MDMA"
+      ],
+      "caution": [
+        "AINS",
+        "Autres ISRS"
+      ]
+    },
+    "harm": {
+      "physical": 20,
+      "dependence": 25,
+      "social": 10
+    },
+    "riskNotes": [
+      "Jamais avec un IMAO.",
+      "Arrêt progressif obligatoire.",
+      "MDMA : efficacité réduite + risque sérotoninergique."
+    ],
+    "color": "#3d8ec9",
+    "emoji": "💙"
+  },
+  {
+    "slug": "fluoxetine",
+    "name": "Fluoxétine",
+    "aliases": [
+      "Prozac"
+    ],
+    "category": "medication",
+    "chemicalClass": "ISRS",
+    "psychoactiveClass": "Antidépresseur",
+    "summary": "ISRS à très longue demi-vie (Prozac). Moins de sevrage aigu, plus d’interactions CYP2D6. Activation possible en début de traitement.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 5,
+        "light": 10,
+        "common": 20,
+        "strong": 40,
+        "heavy": 80,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        10080,
+        20160
+      ],
+      "peakMin": [
+        20160,
+        40320
+      ],
+      "totalMin": [
+        20160,
+        80640
+      ],
+      "afterMin": [
+        10080,
+        20160
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Humeur",
+        "Énergie"
+      ],
+      "neutral": [
+        "Activation",
+        "Insomnie"
+      ],
+      "negative": [
+        "Anxiété initiale",
+        "Dysfonction sexuelle",
+        "Interactions médicamenteuses"
+      ]
+    },
+    "neurotransmitters": [
+      "serotonin"
+    ],
+    "interactions": {
+      "dangerous": [
+        "IMAO",
+        "Tramadol",
+        "MDMA"
+      ],
+      "caution": [
+        "Tamoxifène (CYP2D6)"
+      ]
+    },
+    "harm": {
+      "physical": 20,
+      "dependence": 20,
+      "social": 10
+    },
+    "riskNotes": [
+      "Délai de wash-out long avant un IMAO (5 semaines)."
+    ],
+    "color": "#3d8ec9",
+    "emoji": "💙"
+  },
+  {
+    "slug": "escitalopram",
+    "name": "Escitalopram",
+    "aliases": [
+      "Seroplex",
+      "Lexapro",
+      "Cipralex"
+    ],
+    "category": "medication",
+    "chemicalClass": "ISRS",
+    "psychoactiveClass": "Antidépresseur",
+    "summary": "ISRS (énantiomère S du citalopram). Anxiété/dépression. Allongement QT dose-dépendant.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 2.5,
+        "light": 5,
+        "common": 10,
+        "strong": 15,
+        "heavy": 20,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        10080,
+        20160
+      ],
+      "peakMin": [
+        20160,
+        40320
+      ],
+      "totalMin": [
+        20160,
+        40320
+      ],
+      "afterMin": [
+        2880,
+        10080
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Anxiolyse progressive",
+        "Humeur"
+      ],
+      "neutral": [
+        "Nausées",
+        "Sueurs"
+      ],
+      "negative": [
+        "QT long",
+        "Dysfonction sexuelle",
+        "Sevrage"
+      ]
+    },
+    "neurotransmitters": [
+      "serotonin"
+    ],
+    "interactions": {
+      "dangerous": [
+        "IMAO",
+        "Médicaments QT"
+      ],
+      "caution": [
+        "Tramadol",
+        "MDMA"
+      ]
+    },
+    "harm": {
+      "physical": 22,
+      "dependence": 22,
+      "social": 10
+    },
+    "riskNotes": [
+      "Ne pas dépasser 20 mg (QT)."
+    ],
+    "color": "#3d8ec9",
+    "emoji": "💙"
+  },
+  {
+    "slug": "venlafaxine",
+    "name": "Venlafaxine",
+    "aliases": [
+      "Effexor",
+      "Effexor XR"
+    ],
+    "category": "medication",
+    "chemicalClass": "IRSN",
+    "psychoactiveClass": "Antidépresseur",
+    "summary": "IRSN. Sevrage particulièrement brutal (demi-vie courte). HTA possible à dose élevée.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 18.75,
+        "light": 37.5,
+        "common": 75,
+        "strong": 150,
+        "heavy": 225,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        10080,
+        20160
+      ],
+      "peakMin": [
+        20160,
+        40320
+      ],
+      "totalMin": [
+        20160,
+        40320
+      ],
+      "afterMin": [
+        1440,
+        10080
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Humeur",
+        "Énergie"
+      ],
+      "neutral": [
+        "Sueurs",
+        "Insomnie"
+      ],
+      "negative": [
+        "Sevrage intense",
+        "HTA",
+        "Nausées"
+      ]
+    },
+    "neurotransmitters": [
+      "serotonin",
+      "norepinephrine"
+    ],
+    "interactions": {
+      "dangerous": [
+        "IMAO"
+      ],
+      "caution": [
+        "Tramadol",
+        "Alcool"
+      ]
+    },
+    "harm": {
+      "physical": 28,
+      "dependence": 35,
+      "social": 12
+    },
+    "riskNotes": [
+      "Ne jamais stopper d’un coup.",
+      "Surveiller la tension."
+    ],
+    "color": "#4a7ab5",
+    "emoji": "💙"
+  },
+  {
+    "slug": "bupropion",
+    "name": "Bupropion",
+    "aliases": [
+      "Zyban",
+      "Wellbutrin",
+      "XL"
+    ],
+    "category": "medication",
+    "chemicalClass": "Aminocétone",
+    "psychoactiveClass": "Antidépresseur / sevrage tabac",
+    "summary": "Inhibiteur recapture DA/NA. Peu d’effet sexuel. Abaisse le seuil épileptogène. Contre-indiqué si ATCD de convulsions.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 75,
+        "light": 150,
+        "common": 150,
+        "strong": 300,
+        "heavy": 450,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        10080,
+        20160
+      ],
+      "peakMin": [
+        20160,
+        40320
+      ],
+      "totalMin": [
+        20160,
+        40320
+      ],
+      "afterMin": [
+        2880,
+        10080
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Énergie",
+        "Motivation",
+        "Aide sevrage tabac"
+      ],
+      "neutral": [
+        "Insomnie",
+        "Sécheresse"
+      ],
+      "negative": [
+        "Convulsions (dose)",
+        "Anxiété",
+        "HTA"
+      ]
+    },
+    "neurotransmitters": [
+      "dopamine",
+      "norepinephrine"
+    ],
+    "interactions": {
+      "dangerous": [
+        "IMAO",
+        "Seuil convulsif (tramadol, alcool sevrage)"
+      ],
+      "caution": [
+        "Nicotine substituts"
+      ]
+    },
+    "harm": {
+      "physical": 30,
+      "dependence": 15,
+      "social": 10
+    },
+    "riskNotes": [
+      "Ne pas écraser les LP.",
+      "Max 450 mg/j."
+    ],
+    "color": "#d4a017",
+    "emoji": "⚡"
+  },
+  {
+    "slug": "citalopram",
+    "name": "Citalopram",
+    "aliases": [
+      "Seropram",
+      "Celexa"
+    ],
+    "category": "medication",
+    "chemicalClass": "ISRS",
+    "psychoactiveClass": "Antidépresseur",
+    "summary": "ISRS. QT allongé surtout >40 mg. Racémique de l’escitalopram.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 5,
+        "light": 10,
+        "common": 20,
+        "strong": 30,
+        "heavy": 40,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        10080,
+        20160
+      ],
+      "peakMin": [
+        20160,
+        40320
+      ],
+      "totalMin": [
+        20160,
+        40320
+      ],
+      "afterMin": [
+        2880,
+        10080
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Humeur",
+        "Anxiolyse"
+      ],
+      "neutral": [
+        "Nausées"
+      ],
+      "negative": [
+        "QT",
+        "Dysfonction sexuelle"
+      ]
+    },
+    "neurotransmitters": [
+      "serotonin"
+    ],
+    "interactions": {
+      "dangerous": [
+        "IMAO",
+        "QT"
+      ],
+      "caution": [
+        "Tramadol"
+      ]
+    },
+    "harm": {
+      "physical": 22,
+      "dependence": 20,
+      "social": 10
+    },
+    "riskNotes": [
+      "Max 40 mg (20 mg >65 ans)."
+    ],
+    "color": "#3d8ec9",
+    "emoji": "💙"
+  },
+  {
+    "slug": "paroxetine",
+    "name": "Paroxétine",
+    "aliases": [
+      "Deroxat",
+      "Paxil",
+      "Seroxat"
+    ],
+    "category": "medication",
+    "chemicalClass": "ISRS",
+    "psychoactiveClass": "Antidépresseur",
+    "summary": "ISRS, plus sédatif, sevrage marqué. Fort inhibiteur CYP2D6.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 5,
+        "light": 10,
+        "common": 20,
+        "strong": 30,
+        "heavy": 50,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        10080,
+        20160
+      ],
+      "peakMin": [
+        20160,
+        40320
+      ],
+      "totalMin": [
+        20160,
+        40320
+      ],
+      "afterMin": [
+        1440,
+        10080
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Anxiolyse",
+        "Humeur"
+      ],
+      "neutral": [
+        "Sédation"
+      ],
+      "negative": [
+        "Sevrage intense",
+        "Poids",
+        "Sexualité"
+      ]
+    },
+    "neurotransmitters": [
+      "serotonin"
+    ],
+    "interactions": {
+      "dangerous": [
+        "IMAO"
+      ],
+      "caution": [
+        "Tamoxifène"
+      ]
+    },
+    "harm": {
+      "physical": 22,
+      "dependence": 30,
+      "social": 10
+    },
+    "riskNotes": [
+      "Arrêt très progressif."
+    ],
+    "color": "#3d8ec9",
+    "emoji": "💙"
+  },
+  {
+    "slug": "amitriptyline",
+    "name": "Amitriptyline",
+    "aliases": [
+      "Laroxyl",
+      "Elavil"
+    ],
+    "category": "medication",
+    "chemicalClass": "Tricyclique",
+    "psychoactiveClass": "Antidépresseur / douleur",
+    "summary": "Tricyclique sédatif, aussi douleur neuropathique. Anticholinergique, cardiotoxique en surdose.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 10,
+        "light": 25,
+        "common": 50,
+        "strong": 100,
+        "heavy": 150,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        60,
+        180
+      ],
+      "peakMin": [
+        240,
+        720
+      ],
+      "totalMin": [
+        1440,
+        2880
+      ],
+      "afterMin": [
+        720,
+        1440
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Sommeil",
+        "Antalgie",
+        "Humeur"
+      ],
+      "neutral": [
+        "Sécheresse",
+        "Constipation"
+      ],
+      "negative": [
+        "Tachycardie",
+        "Confusion (sujet âgé)",
+        "Surdose cardiaque"
+      ]
+    },
+    "neurotransmitters": [
+      "serotonin",
+      "norepinephrine"
+    ],
+    "interactions": {
+      "dangerous": [
+        "IMAO",
+        "Alcool"
+      ],
+      "caution": [
+        "Anticholinergiques"
+      ]
+    },
+    "harm": {
+      "physical": 50,
+      "dependence": 20,
+      "social": 15
+    },
+    "riskNotes": [
+      "Surdose potentiellement létale.",
+      "Prudence sujet âgé."
+    ],
+    "color": "#4a6a8a",
+    "emoji": "💊"
+  },
+  {
+    "slug": "duloxetine",
+    "name": "Duloxétine",
+    "aliases": [
+      "Cymbalta"
+    ],
+    "category": "medication",
+    "chemicalClass": "IRSN",
+    "psychoactiveClass": "Antidépresseur / douleur",
+    "summary": "IRSN utilisé dépression, anxiété, douleur neuropathique. Sevrage, HTA, nausées.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 15,
+        "light": 30,
+        "common": 60,
+        "strong": 90,
+        "heavy": 120,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        10080,
+        20160
+      ],
+      "peakMin": [
+        20160,
+        40320
+      ],
+      "totalMin": [
+        20160,
+        40320
+      ],
+      "afterMin": [
+        2880,
+        10080
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Humeur",
+        "Antalgie"
+      ],
+      "neutral": [
+        "Nausées",
+        "Sueurs"
+      ],
+      "negative": [
+        "Sevrage",
+        "HTA",
+        "Hépatique (rare)"
+      ]
+    },
+    "neurotransmitters": [
+      "serotonin",
+      "norepinephrine"
+    ],
+    "interactions": {
+      "dangerous": [
+        "IMAO"
+      ],
+      "caution": [
+        "Alcool",
+        "Tramadol"
+      ]
+    },
+    "harm": {
+      "physical": 25,
+      "dependence": 25,
+      "social": 10
+    },
+    "riskNotes": [
+      "Ne pas ouvrir les gélules LP."
+    ],
+    "color": "#4a7ab5",
+    "emoji": "💙"
+  },
+  {
+    "slug": "trazodone",
+    "name": "Trazodone",
+    "aliases": [
+      "Desyrel"
+    ],
+    "category": "medication",
+    "chemicalClass": "SARI",
+    "psychoactiveClass": "Antidépresseur / hypnotique",
+    "summary": "Souvent prescrit hors AMM pour l’insomnie à faible dose. Priapisme rare. Sédation.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 12.5,
+        "light": 25,
+        "common": 50,
+        "strong": 150,
+        "heavy": 300,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        20,
+        45
+      ],
+      "peakMin": [
+        60,
+        180
+      ],
+      "totalMin": [
+        360,
+        720
+      ],
+      "afterMin": [
+        240,
+        480
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Sommeil",
+        "Calme"
+      ],
+      "neutral": [
+        "Sédation",
+        "Gueule de bois matinale"
+      ],
+      "negative": [
+        "Hypotension",
+        "Priapisme (rare)"
+      ]
+    },
+    "neurotransmitters": [
+      "serotonin"
+    ],
+    "interactions": {
+      "dangerous": [
+        "IMAO",
+        "Alcool"
+      ],
+      "caution": [
+        "Dépresseurs"
+      ]
+    },
+    "harm": {
+      "physical": 18,
+      "dependence": 12,
+      "social": 8
+    },
+    "riskNotes": [
+      "Lever lent : hypotension."
+    ],
+    "color": "#6b5b8a",
+    "emoji": "🌙"
+  },
+  {
+    "slug": "hydroxyzine",
+    "name": "Hydroxyzine",
+    "aliases": [
+      "Atarax"
+    ],
+    "category": "medication",
+    "chemicalClass": "Antihistaminique H1",
+    "psychoactiveClass": "Anxiolytique / antihistaminique",
+    "summary": "Anxiolytique non benzo (Atarax). Sédatif, anticholinergique. QT. Utile si on veut éviter les benzos.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 12.5,
+        "light": 25,
+        "common": 50,
+        "strong": 100,
+        "heavy": 200,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        15,
+        30
+      ],
+      "peakMin": [
+        60,
+        120
+      ],
+      "totalMin": [
+        240,
+        360
+      ],
+      "afterMin": [
+        180,
+        360
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Calme",
+        "Sommeil",
+        "Antiprurit"
+      ],
+      "neutral": [
+        "Sécheresse",
+        "Sédation"
+      ],
+      "negative": [
+        "QT",
+        "Confusion (âgés)"
+      ]
+    },
+    "neurotransmitters": [
+      "histamine"
+    ],
+    "interactions": {
+      "dangerous": [
+        "QT",
+        "Alcool"
+      ],
+      "caution": [
+        "Anticholinergiques"
+      ]
+    },
+    "harm": {
+      "physical": 25,
+      "dependence": 10,
+      "social": 8
+    },
+    "riskNotes": [
+      "Éviter si troubles du rythme."
+    ],
+    "color": "#5b9ad4",
+    "emoji": "🌼"
+  },
+  {
+    "slug": "risperidone",
+    "name": "Rispéridone",
+    "aliases": [
+      "Risperdal"
+    ],
+    "category": "medication",
+    "chemicalClass": "Benzisoxazole",
+    "psychoactiveClass": "Neuroleptique atypique",
+    "summary": "Antipsychotique atypique. Extrapyramidal, prolactinémie. Utilisé psychose, irritabilité.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 0.25,
+        "light": 0.5,
+        "common": 2,
+        "strong": 4,
+        "heavy": 6,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        60,
+        180
+      ],
+      "peakMin": [
+        180,
+        360
+      ],
+      "totalMin": [
+        1440,
+        1440
+      ],
+      "afterMin": [
+        720,
+        1440
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Réduction psychose",
+        "Stabilisation"
+      ],
+      "neutral": [
+        "Sédation"
+      ],
+      "negative": [
+        "Prise de poids",
+        "Parkinsonisme",
+        "Prolactine"
+      ]
+    },
+    "neurotransmitters": [
+      "dopamine",
+      "serotonin"
+    ],
+    "interactions": {
+      "dangerous": [
+        "QT"
+      ],
+      "caution": [
+        "Alcool",
+        "L-DOPA"
+      ]
+    },
+    "harm": {
+      "physical": 40,
+      "dependence": 10,
+      "social": 20
+    },
+    "riskNotes": [
+      "Surveillance métabolique."
+    ],
+    "color": "#6b5b9a",
+    "emoji": "🧠"
+  },
+  {
+    "slug": "olanzapine",
+    "name": "Olanzapine",
+    "aliases": [
+      "Zyprexa"
+    ],
+    "category": "medication",
+    "chemicalClass": "Thiénobenzodiazépine",
+    "psychoactiveClass": "Neuroleptique atypique",
+    "summary": "Antipsychotique très sédatif, prise de poids et dyslipidémie marquées.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 1.25,
+        "light": 2.5,
+        "common": 10,
+        "strong": 15,
+        "heavy": 20,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        30,
+        120
+      ],
+      "peakMin": [
+        240,
+        480
+      ],
+      "totalMin": [
+        1440,
+        1440
+      ],
+      "afterMin": [
+        720,
+        1440
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Sédation",
+        "Antipsychotique"
+      ],
+      "neutral": [
+        "Appétit"
+      ],
+      "negative": [
+        "Poids",
+        "Glycémie",
+        "Dyslipidémie"
+      ]
+    },
+    "neurotransmitters": [
+      "dopamine",
+      "serotonin",
+      "histamine"
+    ],
+    "interactions": {
+      "dangerous": [
+        "Dépresseurs"
+      ],
+      "caution": [
+        "Diabète"
+      ]
+    },
+    "harm": {
+      "physical": 48,
+      "dependence": 10,
+      "social": 22
+    },
+    "riskNotes": [
+      "Bilan métabolique régulier."
+    ],
+    "color": "#6b5b9a",
+    "emoji": "🧠"
+  },
+  {
+    "slug": "quetiapine",
+    "name": "Quétiapine",
+    "aliases": [
+      "Xeroquel",
+      "Seroquel"
+    ],
+    "category": "medication",
+    "chemicalClass": "Dibenzothiazépine",
+    "psychoactiveClass": "Neuroleptique atypique",
+    "summary": "Souvent hors AMM pour le sommeil à 25–50 mg. Aux doses psychose : 300–800 mg. Sédation, poids, QT.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 12.5,
+        "light": 25,
+        "common": 50,
+        "strong": 300,
+        "heavy": 800,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        20,
+        60
+      ],
+      "peakMin": [
+        60,
+        180
+      ],
+      "totalMin": [
+        360,
+        720
+      ],
+      "afterMin": [
+        360,
+        720
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Sommeil",
+        "Calme",
+        "Antipsychotique (haute dose)"
+      ],
+      "neutral": [
+        "Sédation",
+        "Gueule de bois"
+      ],
+      "negative": [
+        "Poids",
+        "Hypotension",
+        "QT"
+      ]
+    },
+    "neurotransmitters": [
+      "dopamine",
+      "serotonin",
+      "histamine"
+    ],
+    "interactions": {
+      "dangerous": [
+        "Dépresseurs",
+        "QT"
+      ],
+      "caution": []
+    },
+    "harm": {
+      "physical": 42,
+      "dependence": 18,
+      "social": 18
+    },
+    "riskNotes": [
+      "Usage sommeil : balance bénéfice/risque à discuter."
+    ],
+    "color": "#6b5b9a",
+    "emoji": "🌙"
+  },
+  {
+    "slug": "aripiprazole",
+    "name": "Aripiprazole",
+    "aliases": [
+      "Abilify"
+    ],
+    "category": "medication",
+    "chemicalClass": "Quinolinone",
+    "psychoactiveClass": "Neuroleptique atypique",
+    "summary": "Agoniste partiel D2. Moins de sédation/poids. Akathisie fréquente. Aussi troubles de l’humeur.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 1,
+        "light": 2,
+        "common": 10,
+        "strong": 15,
+        "heavy": 30,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        180,
+        360
+      ],
+      "peakMin": [
+        1440,
+        2880
+      ],
+      "totalMin": [
+        2880,
+        4320
+      ],
+      "afterMin": [
+        1440,
+        2880
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Stabilisation",
+        "Moins de sédation"
+      ],
+      "neutral": [
+        "Activation"
+      ],
+      "negative": [
+        "Akathisie",
+        "Insomnie",
+        "Jeu pathologique (rare)"
+      ]
+    },
+    "neurotransmitters": [
+      "dopamine",
+      "serotonin"
+    ],
+    "interactions": {
+      "dangerous": [],
+      "caution": [
+        "CYP3A4",
+        "CYP2D6"
+      ]
+    },
+    "harm": {
+      "physical": 28,
+      "dependence": 8,
+      "social": 15
+    },
+    "riskNotes": [
+      "Surveiller l’akathisie."
+    ],
+    "color": "#5b74d4",
+    "emoji": "🧠"
+  },
+  {
+    "slug": "haloperidol",
+    "name": "Halopéridol",
+    "aliases": [
+      "Haldol"
+    ],
+    "category": "medication",
+    "chemicalClass": "Butyrophénone",
+    "psychoactiveClass": "Neuroleptique typique",
+    "summary": "Antipsychotique de 1re génération. Fort blocage D2 : symptômes extrapyramidaux, dyskinésie tardive. QT.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 0.5,
+        "light": 1,
+        "common": 5,
+        "strong": 10,
+        "heavy": 20,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        30,
+        60
+      ],
+      "peakMin": [
+        120,
+        360
+      ],
+      "totalMin": [
+        1440,
+        1440
+      ],
+      "afterMin": [
+        720,
+        1440
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Antipsychotique puissant"
+      ],
+      "neutral": [
+        "Ralentissement"
+      ],
+      "negative": [
+        "Dystonie",
+        "Parkinsonisme",
+        "Dyskinésie tardive",
+        "QT"
+      ]
+    },
+    "neurotransmitters": [
+      "dopamine"
+    ],
+    "interactions": {
+      "dangerous": [
+        "QT",
+        "Lithium (rare ENC)"
+      ],
+      "caution": [
+        "L-DOPA"
+      ]
+    },
+    "harm": {
+      "physical": 55,
+      "dependence": 8,
+      "social": 25
+    },
+    "riskNotes": [
+      "Correcteur anticholinergique parfois nécessaire en aigu."
+    ],
+    "color": "#8a5a7a",
+    "emoji": "🧠"
+  },
+  {
+    "slug": "cyamemazine",
+    "name": "Cyamémazine",
+    "aliases": [
+      "Tercian"
+    ],
+    "category": "medication",
+    "chemicalClass": "Phénothiazine",
+    "psychoactiveClass": "Neuroleptique sédatif",
+    "summary": "Neuroleptique sédatif très utilisé en France (Tercian) pour l’angoisse aiguë. Anticholinergique, hypotension, photosensibilité.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 12.5,
+        "light": 25,
+        "common": 50,
+        "strong": 100,
+        "heavy": 300,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        20,
+        40
+      ],
+      "peakMin": [
+        60,
+        180
+      ],
+      "totalMin": [
+        360,
+        720
+      ],
+      "afterMin": [
+        240,
+        480
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Sédation",
+        "Anxiolyse"
+      ],
+      "neutral": [
+        "Ralentissement"
+      ],
+      "negative": [
+        "Hypotension",
+        "Sécheresse",
+        "Photosensibilité"
+      ]
+    },
+    "neurotransmitters": [
+      "dopamine",
+      "histamine"
+    ],
+    "interactions": {
+      "dangerous": [
+        "Dépresseurs",
+        "Alcool"
+      ],
+      "caution": [
+        "Anticholinergiques"
+      ]
+    },
+    "harm": {
+      "physical": 40,
+      "dependence": 15,
+      "social": 18
+    },
+    "riskNotes": [
+      "Lever prudent.",
+      "Photosensibilité : protection solaire."
+    ],
+    "color": "#6b5b8a",
+    "emoji": "🌙"
+  },
+  {
+    "slug": "loxapine",
+    "name": "Loxapine",
+    "aliases": [
+      "Loxapac"
+    ],
+    "category": "medication",
+    "chemicalClass": "Dibenzoxazépine",
+    "psychoactiveClass": "Neuroleptique",
+    "summary": "Antipsychotique (Loxapac), souvent IM en agitation. Sédation forte, extrapyramidal, hypotension.",
+    "doses": [
+      {
+        "route": "Orale",
+        "threshold": 10,
+        "light": 25,
+        "common": 50,
+        "strong": 100,
+        "heavy": 200,
+        "unit": "mg"
+      }
+    ],
+    "duration": {
+      "onsetMin": [
+        20,
+        60
+      ],
+      "peakMin": [
+        60,
+        180
+      ],
+      "totalMin": [
+        360,
+        720
+      ],
+      "afterMin": [
+        240,
+        480
+      ]
+    },
+    "effects": {
+      "positive": [
+        "Sédation rapide",
+        "Antipsychotique"
+      ],
+      "neutral": [
+        "Ralentissement"
+      ],
+      "negative": [
+        "Dystonie",
+        "Hypotension",
+        "Confusion"
+      ]
+    },
+    "neurotransmitters": [
+      "dopamine"
+    ],
+    "interactions": {
+      "dangerous": [
+        "Dépresseurs"
+      ],
+      "caution": []
+    },
+    "harm": {
+      "physical": 48,
+      "dependence": 10,
+      "social": 20
+    },
+    "riskNotes": [
+      "Surveillance tensionnelle."
+    ],
+    "color": "#6b5b9a",
+    "emoji": "🧠"
   }
 ]

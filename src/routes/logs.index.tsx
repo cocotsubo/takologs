@@ -9,7 +9,7 @@ import {
   Plus,
   Trash2,
 } from "lucide-react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { comboWarnings } from "@/lib/interactions";
 import { type Experience, type Tolerance } from "@/lib/journal";
 import {
@@ -41,6 +41,8 @@ export function LogsPage() {
   const [tab, setTab] = useState<"journal" | "stats" | "tolerance">("journal");
   const [filter, setFilter] = useState("");
   const [timeMode, setTimeMode] = useState<"clock" | "ago" | "gap">("clock");
+  const [shown, setShown] = useState(24);
+  const moreRef = useRef<HTMLDivElement>(null);
 
   const userId = user?.id;
   const refresh = useCallback(async () => {
@@ -65,6 +67,40 @@ export function LogsPage() {
   useEffect(() => {
     void refresh();
   }, [refresh]);
+
+  const filteredExps = useMemo(() => {
+    const q = filter.trim().toLowerCase();
+    if (!q) return exps;
+    return exps.filter(
+      (exp) =>
+        exp.title.toLowerCase().includes(q) ||
+        exp.notes.toLowerCase().includes(q) ||
+        (exp.timedNotes ?? []).some((n) => n.text.toLowerCase().includes(q)) ||
+        exp.ingestions.some(
+          (i) =>
+            i.substanceName.toLowerCase().includes(q) ||
+            resolveName(i.slug, i.substanceName).toLowerCase().includes(q) ||
+            i.notes.toLowerCase().includes(q),
+        ),
+    );
+  }, [exps, filter, resolveName]);
+
+  useEffect(() => {
+    setShown(24);
+  }, [filter]);
+
+  useEffect(() => {
+    const el = moreRef.current;
+    if (!el || shown >= filteredExps.length) return;
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) setShown((n) => Math.min(filteredExps.length, n + 24));
+      },
+      { rootMargin: "600px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [shown, filteredExps.length]);
 
   if (isPending) {
     return (
@@ -300,22 +336,7 @@ export function LogsPage() {
                 </button>
               ))}
             </div>
-            {exps
-              .filter((exp) => {
-                const q = filter.trim().toLowerCase();
-                if (!q) return true;
-                return (
-                  exp.title.toLowerCase().includes(q) ||
-                  exp.notes.toLowerCase().includes(q) ||
-                  exp.ingestions.some(
-                    (i) =>
-                      i.substanceName.toLowerCase().includes(q) ||
-                      resolveName(i.slug, i.substanceName).toLowerCase().includes(q) ||
-                      i.notes.toLowerCase().includes(q),
-                  )
-                );
-              })
-              .map((exp, i) => (
+            {filteredExps.slice(0, shown).map((exp, i) => (
               <ExperienceCard
                 key={exp.id}
                 exp={exp}
@@ -336,6 +357,7 @@ export function LogsPage() {
                 timeMode={timeMode}
               />
             ))}
+            {shown < filteredExps.length ? <div ref={moreRef} className="h-8" /> : null}
           </div>
         )}
       </div>

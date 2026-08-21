@@ -58,5 +58,11 @@
     "color": "#9a7a4a",
     "tint": "rgba(154,122,74,0.18)",
     "emoji": "🔬"
+  },
+  "medication": {
+    "label": "Médicament",
+    "color": "#5b8a9a",
+    "tint": "rgba(91,138,154,0.2)",
+    "emoji": "💊"
   }
 }

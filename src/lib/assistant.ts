@@ -13,7 +13,7 @@ import {
 } from "@/lib/substances";
 import { comboWarnings } from "@/lib/interactions";
 import { helpText, isHelpIntent } from "@/lib/chat-help";
-import { executeChatAction } from "@/lib/chat-agent";
+import { executeChatAction, journalDigest } from "@/lib/chat-agent";
 
 export type AssistantAction = {
   kind: "add";
@@ -81,7 +81,7 @@ function parseDose(q: string): { dose: number | null; unit: string } {
 }
 
 function isAction(q: string) {
-  return /\b(ajoute|ajouter|add|log|prend|prendre|took|note|ingère|ingere)\b/i.test(q);
+  return /\b(ajoute|ajouter|add|logge[rz]?|prend|prendre|took|ingère|ingere)\b/i.test(q);
 }
 
 function isQuestion(q: string) {
@@ -176,14 +176,33 @@ export async function askAssistant(raw: string, locale: "fr" | "en"): Promise<As
             : `${s.emoji} ${s.name} (${d.route}): threshold ${d.threshold}${d.unit}, light ${d.light}, common ${d.common}, strong ${d.strong}, heavy ${d.heavy}.`,
       };
     }
-    return { answer: describe(s, locale) };
+    const pw = await pwNote(s, locale);
+    return { answer: describe(s, locale) + pw };
   }
 
-  if (isQuestion(q) || isAction(q)) {
-    return { answer: helpText(locale) };
-  }
+  const digest = await journalDigest(locale).catch(() => "");
+  const hint = helpText(locale);
+  return {
+    answer:
+      locale === "fr"
+        ? `Je n’ai pas de fiche exacte pour « ${q} », mais je peux quand même t’aider.\n\n${hint}\n\n${digest}`
+        : `I don’t have an exact match for “${q}”, but I can still help.\n\n${hint}\n\n${digest}`,
+  };
+}
 
-  return { answer: helpText(locale) };
+
+async function pwNote(s: Substance, locale: string) {
+  try {
+    const { fetchPwSubstance, pwDigest } = await import("@/lib/psychonautwiki");
+    const row = await Promise.race([
+      fetchPwSubstance(s),
+      new Promise<null>((r) => setTimeout(() => r(null), 2200)),
+    ]);
+    if (!row) return "";
+    return "\n\n" + pwDigest(row, locale === "en" ? "en" : "fr");
+  } catch {
+    return "";
+  }
 }
 
 export async function runAssistantAction(action: AssistantAction, locale: "fr" | "en") {

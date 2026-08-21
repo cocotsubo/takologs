@@ -11,13 +11,15 @@ import {
   Star,
 } from "lucide-react";
 import { CategoryBadge, DurationCurve, Section } from "@/components/ui-bits";
+import { PwPanel } from "@/components/pw-panel";
 import { Molecule } from "@/components/molecule";
 import { EmojiPicker } from "@/components/emoji-picker";
 import { useAddToJournal } from "@/components/journal-context";
 import { useI18n } from "@/lib/i18n";
 import { usePrefs } from "@/lib/prefs";
 import { localizedSubstance } from "@/lib/substance-i18n";
-import { substanceDoc } from "@/lib/substance-docs";
+import { substanceDoc, substanceExtras } from "@/lib/substance-docs";
+import { SECTION_EMOJI } from "@/lib/pw-i18n";
 import { downloadSubstancePdf, shareSubstanceStory } from "@/lib/export-docs";
 import { doseAmplitude } from "@/lib/dose";
 import { translateInteraction } from "@/lib/copy-extra";
@@ -64,6 +66,7 @@ export function SubstancePage() {
   const color = resolveColor(e.slug, e.name, e.color);
   const label = resolveName(e.slug, raw.name) === raw.name ? e.name : resolveName(e.slug, raw.name);
   const doc = substanceDoc(raw, locale);
+  const extra = substanceExtras(raw, locale);
 
   return (
     <div className="px-4 py-8">
@@ -74,11 +77,7 @@ export function SubstancePage() {
         >
           <ArrowLeft className="h-4 w-4" /> {t("nav.substances")}
         </Link>
-        <div className="glass-strong rounded-3xl p-6 sm:p-8 animate-fade-up relative overflow-hidden">
-          <div
-            className="absolute -right-16 -top-16 h-48 w-48 rounded-full blur-3xl opacity-30"
-            style={{ background: color }}
-          />
+        <div className="glass-strong rounded-3xl p-4 sm:p-6 animate-fade-up relative overflow-hidden" style={{ ["--tint" as string]: color }}>
           <div className="relative flex flex-col sm:flex-row sm:items-start gap-4">
             <div className="flex-1 min-w-0">
               <CategoryBadge category={e.category} />
@@ -166,26 +165,43 @@ export function SubstancePage() {
           </p>
         </div>
 
-        <Section title={t("substance.subjective")}>
+        <PwPanel sub={raw} />
+
+        <Section title={t("substance.subjective")} emoji={SECTION_EMOJI.subjective.emoji} color={SECTION_EMOJI.subjective.color}>
           <p className="text-sm text-sand-700 dark:text-sand-200 leading-relaxed">{doc.subjective}</p>
         </Section>
-        <Section title={t("substance.pharmacology")}>
+        <Section title={t("substance.pharmacology")} emoji={SECTION_EMOJI.pharmacology.emoji} color={SECTION_EMOJI.pharmacology.color}>
           <p className="text-sm text-sand-700 dark:text-sand-200 leading-relaxed">{doc.pharmacology}</p>
         </Section>
-        <Section title={t("substance.chemistry")}>
+        <Section title={t("substance.chemistry")} emoji={SECTION_EMOJI.chemistry.emoji} color={SECTION_EMOJI.chemistry.color}>
           <p className="text-sm text-sand-700 dark:text-sand-200 leading-relaxed">{doc.chemistry}</p>
         </Section>
-        <Section title={t("substance.history")}>
+        <Section title={t("substance.history")} emoji={SECTION_EMOJI.history.emoji} color={SECTION_EMOJI.history.color}>
           <p className="text-sm text-sand-700 dark:text-sand-200 leading-relaxed">{doc.history}</p>
         </Section>
-        <Section title={t("substance.toxicity")}>
+        <Section title={t("substance.toxicity")} emoji={SECTION_EMOJI.toxicity.emoji} color={SECTION_EMOJI.toxicity.color}>
           <p className="text-sm text-sand-700 dark:text-sand-200 leading-relaxed">{doc.toxicity}</p>
         </Section>
-        <Section title={t("substance.legal")}>
+        <Section title={t("substance.legal")} emoji={SECTION_EMOJI.legal.emoji} color={SECTION_EMOJI.legal.color}>
           <p className="text-sm text-sand-700 dark:text-sand-200 leading-relaxed">{doc.legal}</p>
         </Section>
+        <Section title={t("substance.tolerance")} emoji={SECTION_EMOJI.tolerance.emoji} color={SECTION_EMOJI.tolerance.color}>
+          <p className="text-sm text-sand-700 dark:text-sand-200 leading-relaxed">{extra.tolerance}</p>
+        </Section>
+        <Section title={t("substance.roas")} emoji={SECTION_EMOJI.roa.emoji} color={SECTION_EMOJI.roa.color}>
+          <p className="text-sm text-sand-700 dark:text-sand-200 leading-relaxed whitespace-pre-line">{extra.roas}</p>
+        </Section>
+        <Section title={t("substance.appearance")} emoji={SECTION_EMOJI.appearance.emoji} color={SECTION_EMOJI.appearance.color}>
+          <p className="text-sm text-sand-700 dark:text-sand-200 leading-relaxed">{extra.appearance}</p>
+        </Section>
+        <Section title={t("substance.hr")} emoji={SECTION_EMOJI.hr.emoji} color={SECTION_EMOJI.hr.color}>
+          <p className="text-sm text-sand-700 dark:text-sand-200 leading-relaxed">{extra.hr}</p>
+        </Section>
+        <Section title={t("substance.afterglow")} emoji={SECTION_EMOJI.afterglow.emoji} color={SECTION_EMOJI.afterglow.color}>
+          <p className="text-sm text-sand-700 dark:text-sand-200 leading-relaxed">{extra.after}</p>
+        </Section>
 
-        <Section title={t("substance.duration")} icon={<Clock className="h-5 w-5 text-clay-500" />}>
+        <Section title={t("substance.duration")} emoji={SECTION_EMOJI.duration.emoji} color={SECTION_EMOJI.duration.color} icon={<Clock className="h-5 w-5 text-clay-500" />}>
           <DurationCurve
             sub={e}
             color={color}
@@ -212,7 +228,7 @@ export function SubstancePage() {
           </div>
         </Section>
 
-        <Section title={t("substance.dosages")}>
+        <Section title={t("substance.dosages")} emoji={SECTION_EMOJI.dosages.emoji} color={SECTION_EMOJI.dosages.color}>
           {e.doses.map((n) => (
             <div key={n.route} className="space-y-3">
               <p className="text-sm font-semibold text-sand-700 dark:text-sand-200">
@@ -244,7 +260,7 @@ export function SubstancePage() {
           </p>
         </Section>
 
-        <Section title={t("substance.effects")} icon={<Sparkles className="h-5 w-5 text-clay-500" />}>
+        <Section title={t("substance.effects")} emoji={SECTION_EMOJI.effects.emoji} color={SECTION_EMOJI.effects.color} icon={<Sparkles className="h-5 w-5 text-clay-500" />}>
           <div className="grid sm:grid-cols-3 gap-4">
             {(
               [
@@ -268,7 +284,7 @@ export function SubstancePage() {
         </Section>
 
         {e.neurotransmitters.length > 0 ? (
-          <Section title={t("substance.neuro")} icon={<Brain className="h-5 w-5 text-clay-500" />}>
+          <Section title={t("substance.neuro")} emoji={SECTION_EMOJI.neuro.emoji} color={SECTION_EMOJI.neuro.color} icon={<Brain className="h-5 w-5 text-clay-500" />}>
             <div className="flex flex-wrap gap-2">
               {e.neurotransmitters.map((n) => {
                 const s = neurotransmitters[n];
@@ -290,12 +306,12 @@ export function SubstancePage() {
           </Section>
         ) : null}
 
-        <Section title={t("substance.molecule")}>
+        <Section title={t("substance.molecule")} emoji={SECTION_EMOJI.molecule.emoji} color={SECTION_EMOJI.molecule.color}>
           <Molecule name={e.name} aliases={e.aliases} />
         </Section>
 
         {e.interactions.dangerous.length > 0 || e.interactions.caution.length > 0 ? (
-          <Section title={t("substance.interactions")} icon={<AlertTriangle className="h-5 w-5 text-clay-500" />}>
+          <Section title={t("substance.interactions")} emoji={SECTION_EMOJI.interactions.emoji} color={SECTION_EMOJI.interactions.color} icon={<AlertTriangle className="h-5 w-5 text-clay-500" />}>
             {e.interactions.dangerous.length > 0 ? (
               <div className="rounded-xl border border-red-400/30 bg-red-500/10 p-4">
                 <p className="flex items-center gap-2 text-sm font-bold text-red-600 dark:text-red-400">
@@ -323,7 +339,7 @@ export function SubstancePage() {
           </Section>
         ) : null}
 
-        <Section title={t("substance.harmRel")}>
+        <Section title={t("substance.harmRel")} emoji={SECTION_EMOJI.harmRel.emoji} color={SECTION_EMOJI.harmRel.color}>
           <div className="grid grid-cols-4 gap-3 text-center">
             {(
               [
@@ -350,7 +366,7 @@ export function SubstancePage() {
         </Section>
 
         {e.riskNotes.length > 0 ? (
-          <Section title={t("substance.risks")}>
+          <Section title={t("substance.risks")} emoji={SECTION_EMOJI.risks.emoji} color={SECTION_EMOJI.risks.color}>
             <ul className="space-y-2 text-sm text-sand-700 dark:text-sand-200">
               {e.riskNotes.map((n) => (
                 <li key={n} className="flex gap-2">

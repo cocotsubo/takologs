@@ -33,6 +33,7 @@ import { DownloadsPage } from "@/routes/downloads";
 import { ChangelogPage } from "@/routes/changelog";
 import { ChatPage } from "@/routes/chat";
 import { ResetPage } from "@/routes/reset";
+import { AdminPage } from "@/routes/admin";
 
 function FtpRoot() {
   return (
@@ -127,6 +128,11 @@ const chatRoute = createRoute({
   path: "/chat",
   component: ChatPage,
 });
+const adminRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/admin",
+  component: AdminPage,
+});
 const profileRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/profile",
@@ -182,6 +188,7 @@ const routeTree = rootRoute.addChildren([
   changelogRoute,
   chatRoute,
   profileRoute,
+  adminRoute,
   loginRoute,
   resetRoute,
   logsRoute.addChildren([logsIndexRoute, logsNewRoute, logsIdRoute]),

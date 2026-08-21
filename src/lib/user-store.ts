@@ -7,6 +7,10 @@ export type StoredUser = {
   pass: string;
   newsletter?: boolean;
   password?: string;
+  createdAt?: number;
+  lastLogin?: number;
+  notes?: string;
+  banned?: boolean;
 };
 
 const USER_KEYS = ["takologs-ftp-users", "takologs-users", "takologs-accounts"];
@@ -58,6 +62,10 @@ export function loadUsers(): StoredUser[] {
           name: String(u.name ?? email.split("@")[0] ?? "TakoLogs"),
           pass: String(u.pass ?? u.password ?? ""),
           newsletter: Boolean(u.newsletter),
+          createdAt: typeof u.createdAt === "number" ? u.createdAt : undefined,
+          lastLogin: typeof u.lastLogin === "number" ? u.lastLogin : undefined,
+          notes: typeof u.notes === "string" ? u.notes : "",
+          banned: Boolean(u.banned),
         });
       }
     } catch {
@@ -74,6 +82,10 @@ export function saveUsers(list: StoredUser[]) {
     name: u.name,
     pass: u.pass,
     newsletter: u.newsletter,
+    createdAt: u.createdAt,
+    lastLogin: u.lastLogin,
+    notes: u.notes,
+    banned: u.banned,
   }));
   durableSet("takologs-ftp-users", JSON.stringify(clean));
 }

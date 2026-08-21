@@ -623,11 +623,11 @@ export function AddSubstanceModal({
 
       {dangerOpen ? (
         <div
-          className="absolute inset-0 z-[95] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fade-in"
+          className="absolute inset-0 z-[95] flex items-center justify-center p-4 modal-dim backdrop-blur-sm animate-fade-in"
           onClick={() => setDangerOpen(false)}
         >
           <div
-            className="glass-strong rounded-2xl p-5 w-full max-w-sm border border-red-500/40 animate-fade-up"
+            className="glass-modal rounded-2xl p-5 w-full max-w-sm border border-red-500/40 animate-fade-up"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center gap-2 mb-3">

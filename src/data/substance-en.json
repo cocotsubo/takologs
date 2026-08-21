@@ -9480,5 +9480,137 @@
       "Limited data: check specialised sources."
     ],
     "aliases": []
+  },
+  "paracetamol": {
+    "name": "Paracetamol",
+    "psychoactiveClass": "Analgesic / antipyretic",
+    "chemicalClass": "Anilide",
+    "summary": "Standard analgesic and antipyretic. No psychoactive effect at therapeutic doses. Major hepatotoxicity above 4 g/day (often lower with alcohol)."
+  },
+  "cetirizine": {
+    "name": "Cetirizine",
+    "psychoactiveClass": "Antihistamine",
+    "chemicalClass": "Piperazine (H1)",
+    "summary": "Second-generation H1 antihistamine. Little sedation at allergy doses."
+  },
+  "oxazepam": {
+    "name": "Oxazepam",
+    "psychoactiveClass": "Depressant / anxiolytic",
+    "chemicalClass": "Benzodiazepine",
+    "summary": "Short/intermediate benzodiazepine (Seresta). Anxiolysis and sedation. Dependence and dangerous withdrawal."
+  },
+  "amisulpride": {
+    "name": "Amisulpride",
+    "psychoactiveClass": "Atypical antipsychotic",
+    "chemicalClass": "Substituted benzamide",
+    "summary": "Atypical antipsychotic (D2/D3). QT prolongation, hyperprolactinaemia."
+  },
+  "sertraline": {
+    "name": "Sertraline",
+    "psychoactiveClass": "Antidepressant",
+    "chemicalClass": "SSRI",
+    "summary": "Widely prescribed SSRI. 2–6 week onset. Withdrawal on abrupt stop. MAOI: serotonin syndrome."
+  },
+  "fluoxetine": {
+    "name": "Fluoxetine",
+    "psychoactiveClass": "Antidepressant",
+    "chemicalClass": "SSRI",
+    "summary": "Very long half-life SSRI (Prozac). Fewer acute withdrawals, more CYP2D6 interactions."
+  },
+  "escitalopram": {
+    "name": "Escitalopram",
+    "psychoactiveClass": "Antidepressant",
+    "chemicalClass": "SSRI",
+    "summary": "SSRI (S-enantiomer of citalopram). Dose-dependent QT prolongation."
+  },
+  "venlafaxine": {
+    "name": "Venlafaxine",
+    "psychoactiveClass": "Antidepressant",
+    "chemicalClass": "SNRI",
+    "summary": "SNRI. Particularly harsh withdrawal. Hypertension at higher doses."
+  },
+  "bupropion": {
+    "name": "Bupropion",
+    "psychoactiveClass": "Antidepressant / smoking cessation",
+    "chemicalClass": "Aminoketone",
+    "summary": "DA/NA reuptake inhibitor. Lowers seizure threshold. Contraindicated if seizure history."
+  },
+  "citalopram": {
+    "name": "Citalopram",
+    "psychoactiveClass": "Antidepressant",
+    "chemicalClass": "SSRI",
+    "summary": "SSRI. QT prolonged especially above 40 mg."
+  },
+  "paroxetine": {
+    "name": "Paroxetine",
+    "psychoactiveClass": "Antidepressant",
+    "chemicalClass": "SSRI",
+    "summary": "More sedating SSRI with marked withdrawal. Strong CYP2D6 inhibitor."
+  },
+  "amitriptyline": {
+    "name": "Amitriptyline",
+    "psychoactiveClass": "Antidepressant / pain",
+    "chemicalClass": "Tricyclic",
+    "summary": "Sedating TCA, also neuropathic pain. Anticholinergic; cardiotoxic in overdose."
+  },
+  "duloxetine": {
+    "name": "Duloxetine",
+    "psychoactiveClass": "Antidepressant / pain",
+    "chemicalClass": "SNRI",
+    "summary": "SNRI for depression, anxiety and neuropathic pain."
+  },
+  "trazodone": {
+    "name": "Trazodone",
+    "psychoactiveClass": "Antidepressant / hypnotic",
+    "chemicalClass": "SARI",
+    "summary": "Often used off-label for insomnia at low dose. Rare priapism. Sedation."
+  },
+  "hydroxyzine": {
+    "name": "Hydroxyzine",
+    "psychoactiveClass": "Anxiolytic / antihistamine",
+    "chemicalClass": "H1 antihistamine",
+    "summary": "Non-benzo anxiolytic (Atarax). Sedating, anticholinergic, QT."
+  },
+  "risperidone": {
+    "name": "Risperidone",
+    "psychoactiveClass": "Atypical antipsychotic",
+    "chemicalClass": "Benzisoxazole",
+    "summary": "Atypical antipsychotic. EPS and prolactin elevation."
+  },
+  "olanzapine": {
+    "name": "Olanzapine",
+    "psychoactiveClass": "Atypical antipsychotic",
+    "chemicalClass": "Thienobenzodiazepine",
+    "summary": "Highly sedating antipsychotic with marked weight gain and dyslipidaemia."
+  },
+  "quetiapine": {
+    "name": "Quetiapine",
+    "psychoactiveClass": "Atypical antipsychotic",
+    "chemicalClass": "Dibenzothiazepine",
+    "summary": "Often off-label for sleep at 25–50 mg. Psychosis doses 300–800 mg."
+  },
+  "aripiprazole": {
+    "name": "Aripiprazole",
+    "psychoactiveClass": "Atypical antipsychotic",
+    "chemicalClass": "Quinolinone",
+    "summary": "Partial D2 agonist. Less sedation/weight gain. Akathisia common."
+  },
+  "haloperidol": {
+    "name": "Haloperidol",
+    "psychoactiveClass": "Typical antipsychotic",
+    "chemicalClass": "Butyrophenone",
+    "summary": "First-generation antipsychotic. Strong D2 block: EPS, tardive dyskinesia. QT."
+  },
+  "cyamemazine": {
+    "name": "Cyamemazine",
+    "psychoactiveClass": "Sedative antipsychotic",
+    "chemicalClass": "Phenothiazine",
+    "summary": "Sedative antipsychotic widely used in France (Tercian) for acute anxiety."
+  },
+  "loxapine": {
+    "name": "Loxapine",
+    "psychoactiveClass": "Antipsychotic",
+    "chemicalClass": "Dibenzoxazepine",
+    "summary": "Antipsychotic (Loxapac), often IM for agitation. Strong sedation."
   }
 }

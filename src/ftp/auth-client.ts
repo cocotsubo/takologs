@@ -69,9 +69,16 @@ export const authClient = {
         name: name?.trim() || key.split("@")[0] || "TakoLogs",
         pass: hashPass(key, password),
         newsletter: Boolean(newsletter),
+        createdAt: Date.now(),
       };
       users.push(user);
       saveUsers(users);
+      try {
+        const { syncUserToServer } = await import("@/lib/admin");
+        syncUserToServer(user);
+      } catch {
+        /* ignore */
+      }
       return { error: null };
     },
   },
@@ -82,7 +89,18 @@ export const authClient = {
       if (!user || !passwordMatches(user, password)) {
         return { error: { message: "invalid credentials" } };
       }
+      if (user.banned) return { error: { message: "banned" } };
       upgradeUserPassword(user, password);
+      try {
+        const users = loadUsers();
+        const row = users.find((x) => x.id === user.id || x.email === key);
+        if (row) {
+          row.lastLogin = Date.now();
+          saveUsers(users);
+        }
+      } catch {
+        /* ignore */
+      }
       setSession({
         id: user.id,
         displayName: user.name,

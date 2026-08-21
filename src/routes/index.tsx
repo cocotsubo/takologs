@@ -90,7 +90,7 @@ export function Home() {
       </section>
 
       <section className="px-4">
-        <div className="mx-auto max-w-7xl grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mx-auto max-w-7xl grid sm:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
           {results.slice(0, 6).map((s) => (
             <SubstanceCard key={s.slug} sub={s} onAdd={() => add(s.slug)} />
           ))}

@@ -15,6 +15,20 @@ function systemPrompt(locale: "fr" | "en", digest?: string) {
   ].join("\n");
 }
 
+function phpEndpoints() {
+  if (typeof window === "undefined") return ["ai-send.php"];
+  const origin = window.location.origin;
+  const dir = window.location.pathname.replace(/\/[^/]*$/, "/") || "/";
+  const out = [
+    new URL("ai-send.php", origin + "/").href,
+    new URL("ai-send.php", origin + dir).href,
+    "/ai-send.php",
+    "ai-send.php",
+    "./ai-send.php",
+  ];
+  return [...new Set(out)];
+}
+
 export async function grokFromBrowser(opts: {
   messages: ChatMsg[];
   locale: "fr" | "en";
@@ -29,7 +43,7 @@ export async function grokFromBrowser(opts: {
       ...opts.messages.slice(-12).map((m) => ({ role: m.role, content: m.content })),
     ],
   };
-  const urls = ["ai-send.php", "./ai-send.php"];
+  const urls = phpEndpoints();
   for (const url of urls) {
     try {
       const res = await fetch(url, {

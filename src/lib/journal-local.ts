@@ -159,6 +159,7 @@ export async function upsertExperience(arg: {
     media?: Experience["media"];
     tracks?: Experience["tracks"];
     heartRate?: Experience["heartRate"];
+    timedNotes?: Experience["timedNotes"];
   };
 }) {
   const data = unwrap(arg);
@@ -190,6 +191,10 @@ export async function upsertExperience(arg: {
           data.heartRate !== undefined
             ? data.heartRate
             : db.experiences[i].heartRate,
+        timedNotes:
+          data.timedNotes !== undefined
+            ? data.timedNotes
+            : db.experiences[i].timedNotes,
       };
       write(db);
       return data.id;
@@ -207,6 +212,7 @@ export async function upsertExperience(arg: {
     media: data.media ?? [],
     tracks: data.tracks ?? [],
     heartRate: data.heartRate ?? [],
+    timedNotes: data.timedNotes ?? [],
     ingestions: [],
   });
   write(db);
@@ -336,6 +342,7 @@ export async function importJournalDump(arg: { data: { experiences: Experience[]
       media: exp.media ?? [],
       tracks: exp.tracks ?? [],
       heartRate: exp.heartRate ?? [],
+      timedNotes: exp.timedNotes ?? [],
       ingestions: (exp.ingestions ?? []).slice(0, 250).map((ing) => {
         const raw = ing as Ingestion & { time?: unknown };
         let t = raw.ingestionTime || "";

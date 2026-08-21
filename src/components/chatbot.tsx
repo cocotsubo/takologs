@@ -38,7 +38,9 @@ async function askGrok(messages: ChatMsg[], locale: "fr" | "en"): Promise<ChatRe
     return { ok: true, handled: true, source: "local", text: helpText(locale) };
   }
   const local = await runLocalAgent(last, locale);
-  if (local.handled && local.action && local.action.kind !== "stats") return local;
+  const localAdd = local.handled && local.action?.kind === "add" && looksLikeAdd(last);
+  if (localAdd) return local;
+  if (local.handled && local.action && local.action.kind !== "stats" && local.action.kind !== "add") return local;
   try {
     const digest = await journalDigest(locale);
     const grok = await withTimeout(grokFromBrowser({ messages, locale, digest }), 22000);

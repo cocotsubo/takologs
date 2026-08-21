@@ -30,6 +30,8 @@ import { useI18n } from "@/lib/i18n";
 import { usePrefs } from "@/lib/prefs";
 import { MOBILE_NAV, MORE_NAV, NAV, PRIMARY_NAV } from "@/lib/nav";
 import { APP_VERSION } from "@/lib/version";
+import { trackPage } from "@/lib/analytics";
+import { ADMIN_EVENT, applySeo, loadSeo, loadSite, type SiteSettings } from "@/lib/admin";
 
 function AppearanceMenu() {
   const { pref, mode, setPref } = useTheme();
@@ -304,6 +306,21 @@ export function Shell({ children }: { children: ReactNode }) {
   const onProfile = pathname === "/profile";
   const onLogEditor =
     pathname === "/logs/new" || /^\/logs\/[^/]+$/.test(pathname);
+  const [site, setSite] = useState<SiteSettings>({ announcement: "", maintenance: false, plausible: "" });
+
+  useEffect(() => {
+    trackPage(pathname);
+  }, [pathname]);
+
+  useEffect(() => {
+    const pull = () => {
+      setSite(loadSite());
+      applySeo(loadSeo());
+    };
+    pull();
+    window.addEventListener(ADMIN_EVENT, pull);
+    return () => window.removeEventListener(ADMIN_EVENT, pull);
+  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -421,11 +438,31 @@ export function Shell({ children }: { children: ReactNode }) {
         ) : null}
         </div>
       </header>
+      {(site.maintenance || site.announcement) ? (
+        <div className={`relative z-20 mx-auto max-w-6xl px-4 pt-2 ${pathname === "/admin" ? "hidden" : ""}`}>
+          <div className={`rounded-2xl px-4 py-2.5 text-sm font-semibold text-center ${
+            site.maintenance
+              ? "bg-amber-500/20 text-amber-900 dark:text-amber-200"
+              : "glass-strong text-sand-800 dark:text-sand-100"
+          }`}>
+            {site.maintenance ? t("admin.maintenance") : site.announcement}
+          </div>
+        </div>
+      ) : null}
       <ActiveBanner />
       <main className="relative pb-[calc(11rem+env(safe-area-inset-bottom))] lg:pb-10">
         <div className="page-slide">{children}</div>
         <footer className="mt-16 px-4 pb-4 text-center text-xs text-sand-500 space-y-1">
-          <p className="font-heading">TakoLogs v{APP_VERSION}</p>
+          <p className="font-heading">
+            <a
+              href="https://github.com/cocotsubo/takologs-webapp"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-clay-500"
+            >
+              TakoLogs v{APP_VERSION}
+            </a>
+          </p>
           <p className="flex flex-wrap gap-3 justify-center">
             <Link to="/legal" className="hover:text-clay-500">
               {t("footer.legal")}

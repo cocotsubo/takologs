@@ -12,7 +12,7 @@ type EnCopy = {
   aliases: string[];
 };
 
-const EN = enCopy as Record<string, EnCopy>;
+const EN = enCopy as unknown as Record<string, EnCopy>;
 
 export function localizedSubstance(s: Substance, locale: Locale): Substance {
   if (locale !== "en") return s;

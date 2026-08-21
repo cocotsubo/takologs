@@ -38,5 +38,10 @@
     "label": "Acétylcholine",
     "color": "#c95f8e",
     "role": "Mémoire, muscles, délire"
+  },
+  "histamine": {
+    "label": "Histamine",
+    "color": "#5b9ad4",
+    "role": "Éveil, allergie, sédation (anti-H1)"
   }
 }

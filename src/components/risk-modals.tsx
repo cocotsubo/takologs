@@ -23,7 +23,7 @@ export function RiskDialog({
         : t("risk.heavyBody", { name: name || "—" });
   return (
     <div
-      className="fixed inset-0 z-[120] bg-sand-200/55 dark:bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+      className="fixed inset-0 z-[120] modal-dim backdrop-blur-sm flex items-center justify-center p-4"
       onClick={(e) => {
         e.stopPropagation();
         onClose();

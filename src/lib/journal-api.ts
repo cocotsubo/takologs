@@ -100,6 +100,7 @@ function parseExtra(raw: string | null | undefined): {
   media?: Experience["media"];
   tracks?: Experience["tracks"];
   heartRate?: Experience["heartRate"];
+  timedNotes?: Experience["timedNotes"];
 } {
   if (!raw) return {};
   try {
@@ -108,6 +109,7 @@ function parseExtra(raw: string | null | undefined): {
       media?: Experience["media"];
       tracks?: Experience["tracks"];
       heartRate?: Experience["heartRate"];
+      timedNotes?: Experience["timedNotes"];
     };
   } catch {
     return {};
@@ -127,6 +129,7 @@ function mapExp(r: ExpRow, ingestions: Ingestion[]): Experience {
     media: extra.media ?? [],
     tracks: extra.tracks ?? [],
     heartRate: extra.heartRate ?? [],
+    timedNotes: extra.timedNotes ?? [],
     ingestions,
   };
 }
@@ -269,6 +272,7 @@ export const upsertExperience = createServerFn({ method: "POST" })
       media?: Experience["media"];
       tracks?: Experience["tracks"];
       heartRate?: Experience["heartRate"];
+      timedNotes?: Experience["timedNotes"];
     }) => data,
   )
   .handler(async ({ context, data }) => {
@@ -284,6 +288,7 @@ export const upsertExperience = createServerFn({ method: "POST" })
       media: data.media ?? [],
       tracks: data.tracks ?? [],
       heartRate: data.heartRate ?? [],
+      timedNotes: data.timedNotes ?? [],
     });
     if (data.id) {
       const existing = await sql<{ id: string }>`
@@ -439,6 +444,7 @@ export const importJournalDump = createServerFn({ method: "POST" })
         media: exp.media ?? [],
         tracks: exp.tracks ?? [],
         heartRate: exp.heartRate ?? [],
+        timedNotes: exp.timedNotes ?? [],
       });
       await sql`
         insert into experiences (id, user_id, title, experience_date, notes, feeling, shulgin, extra_json)

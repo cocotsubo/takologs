@@ -1,15 +1,17 @@
-TakoLogs v20.6 — version FTP
+TakoLogs v21.1 — version FTP
 ============================
 
-1. Décompressez cette archive.
-2. Ouvrez le dossier TakoLogs-ftp.
-3. Envoyez TOUT son contenu (index.html, assets, favicon, etc.)
+1. Décompressez cette archive (un dossier avec index.html à l’intérieur).
+2. Ouvrez le dossier décompressé.
+3. Envoyez TOUT son contenu (index.html, assets/, favicon, *.php, etc.)
    dans le dossier de votre site (souvent public_html ou www).
+   N’envoyez pas le fichier .zip lui-même.
 4. Ouvrez votre nom de domaine dans le navigateur.
 
-Le journal est enregistré dans le navigateur (pas de compte en ligne).
-Les pages substances, comparateur, effets, logs et profil fonctionnent
-sans serveur Node.
+Le journal est enregistré dans le navigateur.
+Les mails (bienvenue, mot de passe) passent par mail-send.php + Resend.
+L’API PsychonautWiki : pw-api.php (proxy si le navigateur est bloqué).
+TakoAI : ai-send.php.
 
 Si le site est dans un sous-dossier (ex. votresite.fr/takologs/),
 envoyez ces fichiers dans ce sous-dossier.

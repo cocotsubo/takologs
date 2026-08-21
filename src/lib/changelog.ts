@@ -730,4 +730,46 @@ export const CHANGELOG: Change[] = [
       "Action GitHub : lancer une version depuis l’onglet Actions, ou au push de version.ts.",
     ],
   },
+  {
+    v: "20.8",
+    date: "2026-08",
+    title: "Administration",
+    items: [
+      "Page /admin : statistiques de visites, comptes (modifier / supprimer), outils du site, marketing & SEO.",
+      "Mot de passe admin, bandeau d’annonce, mode maintenance, sitemap / robots / UTM.",
+    ],
+  },
+  {
+    v: "20.9",
+    date: "2026-08",
+    title: "Fiches, notes, TakoAI, médicaments",
+    items: [
+      "Pop-ups d’avertissement lisibles en mode clair.",
+      "Notes horodatées (heure, couleur, emoji) sur chaque expérience.",
+      "Cartes substances plus animées, fiches enrichies (tolérance, RdR, voies, après-coup).",
+      "Médicaments (paracétamol, cétirizine, Seresta, ISRS, anxiolytiques, neuroleptiques).",
+      "Logs plus fluides avec des centaines d’expériences. TakoAI : plus d’ajout fantôme, PHP xAI plus robuste.",
+      "Le numéro de version mène au dépôt GitHub.",
+    ],
+  },
+  {
+    v: "21.0",
+    date: "2026-08",
+    title: "API PsychonautWiki",
+    items: [
+      "Fiches branchées sur api.psychonautwiki.org : doses/durées live, tolérance, addiction, toxicité, interactions, réactifs, photos.",
+      "Extrait d’article via l’API MediaWiki. Cache 1 h. Proxy PHP si le navigateur est bloqué.",
+      "TakoAI enrichit ses réponses avec le digest PsychonautWiki.",
+    ],
+  },
+  {
+    v: "21.1",
+    date: "2026-08",
+    title: "Fiches PW traduites",
+    items: [
+      "Données live PsychonautWiki traduites en français (doses, durées, tolérance, toxicité, extraits).",
+      "Cartes substances compactes : plus de vide en haut, grille items-start.",
+      "Chaque carte de fiche a un émoji + teinte (tolérance, chimie, interactions…).",
+    ],
+  },
 ];

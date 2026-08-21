@@ -79,6 +79,7 @@ export const CATEGORY_ORDER = [
   "opioid",
   "deliriant",
   "nootropic",
+  "medication",
   "misc",
 ] as const;
 

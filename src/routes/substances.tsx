@@ -67,7 +67,7 @@ export function SubstancesPage() {
             <CategoryChip key={d} id={d} active={cat === d} onClick={() => setCat(d)} />
           ))}
         </div>
-        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
           {list.slice(0, shown).map((s) => (
             <SubstanceCard key={s.slug} sub={s} onAdd={() => requestAdd(s.slug)} />
           ))}

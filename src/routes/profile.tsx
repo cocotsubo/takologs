@@ -182,6 +182,17 @@ export function ProfilePage() {
           subtitle={t("profile.subtitle")}
         />
 
+        <Link
+          to="/admin"
+          className="glass-strong rounded-2xl p-4 flex items-center justify-between gap-3 hover:scale-[1.01] transition-transform"
+        >
+          <span>
+            <span className="font-heading font-bold text-sand-900 dark:text-sand-50 block">{t("admin.title")}</span>
+            <span className="text-xs text-sand-500">{t("admin.subtitle")}</span>
+          </span>
+          <span className="text-clay-500 text-sm font-semibold">→</span>
+        </Link>
+
         {msg ? (
           <p className="relative z-50 rounded-2xl bg-clay-500/15 text-clay-600 dark:text-clay-400 px-4 py-3 text-sm font-semibold">
             {msg}

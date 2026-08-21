@@ -1,4 +1,5 @@
 import { AddSubstanceModal } from "@/components/add-substance-modal";
+import { TimedNotes } from "@/components/timed-notes";
 import { CurveZoomButton } from "@/components/curve-zoom";
 import { ExperienceCurves } from "@/components/experience-curves";
 import { ExperienceMusic } from "@/components/experience-music";
@@ -27,6 +28,7 @@ import {
   type Ingestion,
   type IngestionInput,
   type ShulginPoint,
+  type TimedNote,
 } from "@/lib/journal";
 import {
   addIngestion,
@@ -71,6 +73,7 @@ export function LogEditor({ id }: Props) {
   const [heartRate, setHeartRate] = useState<HeartRatePoint[]>([]);
   const [media, setMedia] = useState<ExperienceMedia[]>([]);
   const [tracks, setTracks] = useState<ExperienceTrack[]>([]);
+  const [timedNotes, setTimedNotes] = useState<TimedNote[]>([]);
   const [ings, setIngs] = useState<Ingestion[]>([]);
   const [saving, setSaving] = useState(false);
   const [showAdd, setShowAdd] = useState(false);
@@ -91,6 +94,7 @@ export function LogEditor({ id }: Props) {
       setHeartRate(exp.heartRate ?? []);
       setMedia(exp.media ?? []);
       setTracks(exp.tracks ?? []);
+      setTimedNotes(exp.timedNotes ?? []);
       setIngs(exp.ingestions);
     },
     [],
@@ -161,6 +165,7 @@ export function LogEditor({ id }: Props) {
           heartRate: patch?.heartRate ?? heartRate,
           media,
           tracks,
+          timedNotes,
         },
       });
       setExpId(savedId);
@@ -185,11 +190,12 @@ export function LogEditor({ id }: Props) {
           heartRate,
           media,
           tracks,
+          timedNotes,
         },
       });
     }, 500);
     return () => window.clearTimeout(timer);
-  }, [expId, shulgin, shulginLog, heartRate, media, tracks, feeling, notes, title, date, locale]);
+  }, [expId, shulgin, shulginLog, heartRate, media, tracks, timedNotes, feeling, notes, title, date, locale]);
 
   const handleAdd = async (input: IngestionInput) => {
     setAddError(null);
@@ -468,6 +474,7 @@ export function LogEditor({ id }: Props) {
               className="mt-1 w-full bg-transparent rounded-xl glass px-3 py-2.5 text-sm text-sand-900 dark:text-sand-50 outline-none focus:ring-2 focus:ring-clay-500/40 resize-none"
             />
           </label>
+          <TimedNotes notes={timedNotes} onChange={setTimedNotes} />
           <div>
             <p className="text-xs font-semibold text-sand-600 dark:text-sand-300 mb-1.5">
               {t("feeling.label")}

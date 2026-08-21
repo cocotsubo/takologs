@@ -26,6 +26,14 @@ export type ExperienceMedia = {
   kind: "image" | "video";
 };
 
+export type TimedNote = {
+  id: string;
+  time: string;
+  text: string;
+  color: string;
+  emoji: string;
+};
+
 export type Experience = {
   id: string;
   title: string;
@@ -37,6 +45,7 @@ export type Experience = {
   heartRate?: HeartRatePoint[];
   media?: ExperienceMedia[];
   tracks?: ExperienceTrack[];
+  timedNotes?: TimedNote[];
   ingestions: Ingestion[];
 };
 

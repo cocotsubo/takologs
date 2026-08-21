@@ -45,6 +45,42 @@ foreach ($preferred as $m) {
 }
 $lastBody = '';
 $lastCode = 502;
+function tako_post($url, $payload, $key) {
+  if (function_exists('curl_init')) {
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [
+      CURLOPT_POST => true,
+      CURLOPT_HTTPHEADER => [
+        'Authorization: Bearer ' . $key,
+        'Content-Type: application/json',
+      ],
+      CURLOPT_POSTFIELDS => $payload,
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_TIMEOUT => 40,
+      CURLOPT_SSL_VERIFYPEER => true,
+    ]);
+    $body = curl_exec($ch);
+    $code = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $err = curl_error($ch);
+    curl_close($ch);
+    return [$body, $code, $err];
+  }
+  $ctx = stream_context_create([
+    'http' => [
+      'method' => 'POST',
+      'header' => "Authorization: Bearer $key\r\nContent-Type: application/json\r\n",
+      'content' => $payload,
+      'timeout' => 40,
+      'ignore_errors' => true,
+    ],
+  ]);
+  $body = @file_get_contents($url, false, $ctx);
+  $code = 502;
+  if (isset($http_response_header[0]) && preg_match('/\s(\d{3})\s/', $http_response_header[0], $m)) {
+    $code = (int)$m[1];
+  }
+  return [$body, $code, $body === false ? 'fopen' : ''];
+}
 foreach ($models as $model) {
   $payload = json_encode([
     'model' => $model,
@@ -52,21 +88,7 @@ foreach ($models as $model) {
     'max_tokens' => 900,
     'messages' => $messages,
   ]);
-  $ch = curl_init('https://api.x.ai/v1/chat/completions');
-  curl_setopt_array($ch, [
-    CURLOPT_POST => true,
-    CURLOPT_HTTPHEADER => [
-      'Authorization: Bearer ' . $key,
-      'Content-Type: application/json',
-    ],
-    CURLOPT_POSTFIELDS => $payload,
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_TIMEOUT => 40,
-  ]);
-  $body = curl_exec($ch);
-  $code = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
-  $err = curl_error($ch);
-  curl_close($ch);
+  [$body, $code, $err] = tako_post('https://api.x.ai/v1/chat/completions', $payload, $key);
   if ($body === false) {
     $lastBody = json_encode(['error' => $err ?: 'curl']);
     $lastCode = 502;

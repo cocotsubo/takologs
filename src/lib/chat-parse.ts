@@ -2,7 +2,8 @@ import { findSubstanceByName, searchSubstances } from "@/lib/substances";
 import type { ChatAction, ChatDose } from "@/lib/chat-types";
 
 export function looksLikeAdd(q: string) {
-  return /\b(ajoute[r]?|add|log|prend(?:re)?|took|note|ing[eè]re)\b/i.test(q);
+  return /\b(ajoute(?:r)?|ajouter|add|logge[rz]?|prendre|took|ing[eè]re)\b/i.test(q)
+    && !/\b(comprend|notebook|catalogue)\b/i.test(q);
 }
 
 export function looksLikeToolDump(text: string) {
@@ -177,6 +178,7 @@ export function parseNavigate(q: string): ChatAction | undefined {
     [/exp[eé]rience/, "/experiences"],
     [/accueil|home/, "/"],
     [/tako|chat/, "/chat"],
+    [/admin|administration/, "/admin"],
   ];
   for (const [re, path] of map) {
     if (re.test(low)) return { kind: "navigate", path };
@@ -308,7 +310,7 @@ export function interpretMessage(q: string): ChatAction | undefined {
   if (nav) return nav;
   if (looksLikeStats(q) && !looksLikeAdd(q)) return { kind: "stats" };
   const parsed = parseAddItems(q);
-  if (parsed.items.length && (looksLikeAdd(q) || parsed.items.length > 1 || parsed.title)) {
+  if (parsed.items.length && looksLikeAdd(q)) {
     const first = parsed.items[0];
     return {
       kind: "add",

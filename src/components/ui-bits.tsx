@@ -318,18 +318,23 @@ export function SubstanceCard({
   const label = resolveName(view.slug, sub.name) === sub.name ? view.name : resolveName(view.slug, sub.name);
   const last = lastDoseFor(sub.name, sub.slug);
   return (
-    <Reveal>
+    <Reveal className="self-start h-auto">
       <Link
         to="/substance/$slug"
         params={{ slug: sub.slug }}
-        className="glass glass-tint card-hover sub-card rounded-2xl p-4 block text-left"
+        className="glass glass-tint card-hover sub-card rounded-2xl p-3 block text-left overflow-hidden relative"
         style={{ ["--tint" as string]: color }}
       >
-      <div className="flex items-start justify-between gap-2">
+      <div className="flex items-start justify-between gap-2 relative">
         <div className="min-w-0">
           <CategoryBadge category={sub.category} />
-          <h3 className="mt-2 font-heading text-lg font-bold text-sand-900 dark:text-sand-50 truncate">
-            <span className="mr-1.5">{emoji}</span>
+          <h3 className="mt-1.5 font-heading text-lg font-bold text-sand-900 dark:text-sand-50 truncate flex items-center gap-2">
+            <span
+              className="emoji-orb inline-flex h-8 w-8 items-center justify-center rounded-xl text-base shrink-0"
+              style={{ background: `${color}33`, boxShadow: `0 6px 14px ${color}28` }}
+            >
+              {emoji}
+            </span>
             {label}
           </h3>
           <p className="mt-1 text-xs text-sand-500 dark:text-sand-400 line-clamp-2">
@@ -431,21 +436,37 @@ export function PageHero({
 export function Section({
   title,
   icon,
+  emoji,
+  color,
   children,
 }: {
   title: string;
   icon?: ReactNode;
+  emoji?: string;
+  color?: string;
   children: ReactNode;
 }) {
   return (
     <Reveal>
-      <section className="glass rounded-2xl p-5 sm:p-6">
-      <h2 className="font-heading text-lg font-bold text-sand-900 dark:text-sand-50 mb-4 flex items-center gap-2">
-        {icon}
-        {title}
-      </h2>
-      {children}
-    </section>
+      <section
+        className="glass glass-tint rounded-2xl p-4 sm:p-5"
+        style={color ? { ["--tint" as string]: color } : undefined}
+      >
+        <h2 className="font-heading text-lg font-bold text-sand-900 dark:text-sand-50 mb-3 flex items-center gap-2">
+          {emoji ? (
+            <span
+              className="emoji-orb inline-flex h-8 w-8 items-center justify-center rounded-xl text-base shrink-0"
+              style={color ? { background: `${color}33`, boxShadow: `0 6px 14px ${color}28` } : undefined}
+            >
+              {emoji}
+            </span>
+          ) : (
+            icon
+          )}
+          {title}
+        </h2>
+        {children}
+      </section>
     </Reveal>
   );
 }

@@ -100,7 +100,7 @@ export function NeuroPage() {
           {t("neuro.related")}
           <span className="ml-2 text-sm font-semibold text-sand-400">{related.length}</span>
         </h3>
-        <div className="mt-4 grid sm:grid-cols-2 gap-4">
+        <div className="mt-4 grid sm:grid-cols-2 gap-4 items-start">
           {related.slice(0, 24).map((s) => (
             <SubstanceCard key={s.slug} sub={s} />
           ))}

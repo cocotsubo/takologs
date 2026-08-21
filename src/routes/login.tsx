@@ -30,6 +30,7 @@ export const Route = createFileRoute("/login")({
 function mapAuthError(message: string | undefined, t: (k: string) => string) {
   const e = (message ?? "").toLowerCase();
   if (!e) return t("login.errGeneric");
+  if (e.includes("banned")) return t("admin.banned");
   if (e.includes("invalid") || e.includes("credential")) return t("login.errCreds");
   if (e.includes("already registered") || e.includes("already been registered"))
     return t("login.errExists");

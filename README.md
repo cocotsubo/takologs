@@ -4,7 +4,7 @@
 
 Application web / PWA pour suivre sa consommation, consulter des fiches de substances, détecter les mélanges dangereux, et être accompagné par **TakoAI**.
 
-[takohelp.com](https://takohelp.com) · version **20.7** · [cocotsubo/takologs](https://github.com/cocotsubo/takologs)
+[takohelp.com](https://takohelp.com) · version **21.1** · [cocotsubo/takologs](https://github.com/cocotsubo/takologs)
 
 <p align="center">
   <img src="screenshots/ftp-home-fixed.png" alt="Accueil TakoLogs" width="820" />
