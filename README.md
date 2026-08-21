@@ -12,12 +12,16 @@ Application web / PWA pour suivre sa consommation, consulter des fiches de subst
 
 ---
 
+
 ## Télécharger une ancienne version
 
-Chaque version a une pull request et une [release GitHub](https://github.com/cocotsubo/takologs/releases) :
-télécharge le zip, décompresse, dépose le contenu sur ton FTP.
+Chaque version a une **pull request** et une **release** : zip à décompresser puis déposer sur le FTP.
 
-Table complète : [VERSIONS.md](VERSIONS.md).
+- Table complète : [VERSIONS.md](VERSIONS.md)
+- [Releases](https://github.com/cocotsubo/takologs/releases) · [Pull requests](https://github.com/cocotsubo/takologs/pulls?q=is%3Apr+label%3Aversion)
+- Actuelle **v20.6** : [TakoLogs.zip](https://github.com/cocotsubo/takologs/releases/download/v20.6/TakoLogs.zip)
+- Historique **v13** : [TakoLogs-v13.zip](https://github.com/cocotsubo/takologs/releases/download/v13.0/TakoLogs-v13.zip)
+
 
 ---
 
