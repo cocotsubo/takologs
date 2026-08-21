@@ -1,0 +1,76 @@
+# Publie une version TakoLogs : bump +0.1, changelog, zip FTP, PR, release GitHub.
+#
+# Manuel : Actions → Version → Run workflow (titre + notes).
+# Auto   : un push de src/lib/version.ts sur main crée la PR + release si le tag n’existe pas.
+
+name: Version
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: Titre de la version
+        required: true
+        type: string
+      notes:
+        description: Correctifs (une ligne = un point)
+        required: true
+        type: string
+      bump:
+        description: Incrément (0.1 par défaut)
+        required: false
+        default: "0.1"
+        type: string
+  push:
+    branches: [main]
+    paths:
+      - src/lib/version.ts
+
+concurrency:
+  group: takologs-release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Bump + publier (manuel)
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          NOTES_FILE=$(mktemp)
+          printf '%s\n' "${{ github.event.inputs.notes }}" > "$NOTES_FILE"
+          node scripts/release.mjs \
+            --title "${{ github.event.inputs.title }}" \
+            --notes-file "$NOTES_FILE" \
+            --bump "${{ github.event.inputs.bump || '0.1' }}"
+
+      - name: Publier la version déjà bumpée (push version.ts)
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: node scripts/release.mjs --publish-current --no-build

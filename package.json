@@ -16,7 +16,10 @@
     "check:auth": "node scripts/check-auth-invariant.mjs",
     "test": "node --test 'scripts/**/*.test.mjs'",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "release": "node scripts/release.mjs",
+    "release:current": "node scripts/release.mjs --publish-current",
+    "version:bump": "node scripts/release.mjs --bump-only"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.4",

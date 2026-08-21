@@ -4,24 +4,11 @@
 
 Application web / PWA pour suivre sa consommation, consulter des fiches de substances, détecter les mélanges dangereux, et être accompagné par **TakoAI**.
 
-[takohelp.com](https://takohelp.com) · version **20.6** · [cocotsubo/takologs](https://github.com/cocotsubo/takologs)
+[takohelp.com](https://takohelp.com) · version **20.7** · [cocotsubo/takologs](https://github.com/cocotsubo/takologs)
 
 <p align="center">
   <img src="screenshots/ftp-home-fixed.png" alt="Accueil TakoLogs" width="820" />
 </p>
-
----
-
-
-## Télécharger une ancienne version
-
-Chaque version a une **pull request** et une **release** : zip à décompresser puis déposer sur le FTP.
-
-- Table complète : [VERSIONS.md](VERSIONS.md)
-- [Releases](https://github.com/cocotsubo/takologs/releases) · [Pull requests](https://github.com/cocotsubo/takologs/pulls?q=is%3Apr+label%3Aversion)
-- Actuelle **v20.6** : [TakoLogs.zip](https://github.com/cocotsubo/takologs/releases/download/v20.6/TakoLogs.zip)
-- Historique **v13** : [TakoLogs-v13.zip](https://github.com/cocotsubo/takologs/releases/download/v13.0/TakoLogs-v13.zip)
-
 
 ---
 
@@ -698,6 +685,22 @@ Build statique FTP :
 ```bash
 npx vite build --config vite.ftp.config.ts
 ```
+
+---
+
+## Publier une version
+
+Chaque version crée automatiquement une **branche** `release/vX.Y`, une **pull request** et une **release GitHub** (zip téléchargeable).
+
+Depuis le dépôt :
+
+```bash
+npm run release -- --title "Titre" --notes "Correctif 1" --notes "Correctif 2"
+```
+
+Ou sur GitHub : **Actions → Version → Run workflow** (titre + notes). Un push de `src/lib/version.ts` sur `main` publie aussi la version si le tag n’existe pas.
+
+La version s’incrémente de **+0.1** (20.6 → 20.7). Historique : [VERSIONS.md](VERSIONS.md) · [Releases](https://github.com/cocotsubo/takologs/releases).
 
 ---
 
