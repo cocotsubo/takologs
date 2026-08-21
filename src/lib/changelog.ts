@@ -721,4 +721,13 @@ export const CHANGELOG: Change[] = [
       "Les molécules sont en SVG (plus un canvas) : Safari les floute enfin à travers les cartes.",
     ],
   },
+  {
+    v: "20.7",
+    date: "2026-08",
+    title: "Versions automatiques",
+    items: [
+      "Bump +0.1, changelog, zip FTP, pull request et release GitHub créés automatiquement.",
+      "Action GitHub : lancer une version depuis l’onglet Actions, ou au push de version.ts.",
+    ],
+  },
 ];
