@@ -12,6 +12,15 @@ Application web / PWA pour suivre sa consommation, consulter des fiches de subst
 
 ---
 
+## Télécharger une ancienne version
+
+Chaque version a une pull request et une [release GitHub](https://github.com/cocotsubo/takologs/releases) :
+télécharge le zip, décompresse, dépose le contenu sur ton FTP.
+
+Table complète : [VERSIONS.md](VERSIONS.md).
+
+---
+
 ## Avertissement
 
 TakoLogs est un outil de **réduction des risques**, pas un conseil médical.
