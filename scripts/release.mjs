@@ -382,6 +382,15 @@ function main() {
     console.log(JSON.stringify(ver, null, 2));
     return;
   }
+  if (publishCurrent && hasGh()) {
+    try {
+      gh(["release", "view", `v${next}`, "--repo", REPO]);
+      console.log(`Release v${next} déjà publiée — rien à faire.`);
+      return;
+    } catch {
+      /* publish */
+    }
+  }
 
   if (!publishCurrent) {
     writeVersion(next);
