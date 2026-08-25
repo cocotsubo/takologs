@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <title>TakoLogs — Savoir, réduction des risques & journal</title>
+    <meta
+      name="description"
+      content="TakoLogs : encyclopédie de substances, comparateur, réduction des risques et journal d'expériences."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="TakoLogs" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="theme-color" content="#c9704f" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap"
+    />
+    <script>
+      (function () {
+        try {
+          var h = localStorage.getItem("takologs-accent-hue") || "36";
+          var n = parseInt(h, 10);
+          if (!isFinite(n)) n = 36;
+          var r = document.documentElement;
+          var mono = n < 0;
+          r.classList.toggle("mono", mono);
+          if (mono) {
+            r.style.setProperty("--accent-h", "0");
+            r.style.setProperty("--clay-s", "0%");
+          } else {
+            n = ((n % 360) + 360) % 360;
+            r.style.setProperty("--accent-h", String(n));
+          }
+          var t = localStorage.getItem("takologs-theme") || "auto";
+          var hr = new Date().getHours();
+          var dark = t === "dark" || (t !== "light" && (hr >= 19 || hr < 7));
+          r.classList.toggle("dark", dark);
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-Ik91WM-E.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/durable-store-DHcXf3UG.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-CYv7utjN.css">
+    <style>
+      .space-y-3:has(> h2 svg.fill-amber-400) { display: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <p id="boot-msg" style="font-family:system-ui,sans-serif;text-align:center;margin-top:28vh;color:#8a6239;font-size:15px">
+        Chargement de TakoLogs…
+      </p>
+    </div>
+    <script>
+      (function () {
+        var KEY = "takologs-boot-bust";
+        function ready() {
+          var r = document.getElementById("root");
+          return r && r.querySelector(".app-bg, nav, header");
+        }
+        function recover() {
+          if (ready()) return;
+          try {
+            if (sessionStorage.getItem(KEY) === "1") {
+              var m = document.getElementById("boot-msg");
+              if (m)
+                m.textContent =
+                  "Cache bloqué. Efface les données du site pour takohelp.com, puis recharge.";
+              return;
+            }
+            sessionStorage.setItem(KEY, "1");
+          } catch (e) {}
+          var jobs = [];
+          if (navigator.serviceWorker) {
+            jobs.push(
+              navigator.serviceWorker.getRegistrations().then(function (rs) {
+                return Promise.all(rs.map(function (r) { return r.unregister(); }));
+              }),
+            );
+          }
+          if (window.caches) {
+            jobs.push(
+              caches.keys().then(function (ks) {
+                return Promise.all(ks.map(function (k) { return caches.delete(k); }));
+              }),
+            );
+          }
+          Promise.all(jobs).then(function () { location.reload(); });
+        }
+        window.addEventListener("load", function () { setTimeout(recover, 12000); });
+        window.addEventListener("error", function (e) {
+          if (e.filename && /\/assets\//.test(e.filename)) recover();
+        });
+      })();
+    </script>
+  </body>
+</html>
