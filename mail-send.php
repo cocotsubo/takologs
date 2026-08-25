@@ -12,7 +12,7 @@ $data = json_decode($raw ?: '[]', true);
 if (!is_array($data)) {
   $data = $_POST;
 }
-$key = trim((string)($data['apiKey'] ?? getenv('RESEND_API_KEY') ?: 're_FpC8UF4k_M1YadrZmVCvQT9B8dBqhHGqH'));
+$key = trim((string)(getenv('RESEND_API_KEY') ?: ''));
 $from = trim((string)($data['from'] ?? 'TakoLogs <noreply@mail.takohelp.com>'));
 $to = trim((string)($data['to'] ?? ''));
 $subject = (string)($data['subject'] ?? '');

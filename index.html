@@ -72,13 +72,7 @@
         function recover() {
           if (ready()) return;
           try {
-            if (sessionStorage.getItem(KEY) === "1") {
-              var m = document.getElementById("boot-msg");
-              if (m)
-                m.textContent =
-                  "Cache bloqué. Efface les données du site pour takohelp.com, puis recharge.";
-              return;
-            }
+            sessionStorage.removeItem(KEY);
             sessionStorage.setItem(KEY, "1");
           } catch (e) {}
           var jobs = [];
