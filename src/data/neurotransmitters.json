@@ -1,0 +1,47 @@
+{
+  "serotonin": {
+    "label": "Sérotonine (5-HT)",
+    "color": "#c9704f",
+    "role": "Humeur, perception, empathie"
+  },
+  "dopamine": {
+    "label": "Dopamine",
+    "color": "#c99a2e",
+    "role": "Motivation, récompense, énergie"
+  },
+  "norepinephrine": {
+    "label": "Noradrénaline",
+    "color": "#b1573a",
+    "role": "Éveil, vigilance, rythme cardiaque"
+  },
+  "gaba": {
+    "label": "GABA",
+    "color": "#5b8a72",
+    "role": "Calme, sédation, anxiolyse"
+  },
+  "glutamate": {
+    "label": "Glutamate (NMDA)",
+    "color": "#6f86c9",
+    "role": "Apprentissage, dissociation"
+  },
+  "opioid": {
+    "label": "Récepteurs opioïdes",
+    "color": "#8a6239",
+    "role": "Analgésie, euphorie, respiration"
+  },
+  "cannabinoid": {
+    "label": "Récepteurs CB1",
+    "color": "#7fa15a",
+    "role": "Appétit, détente, mémoire"
+  },
+  "acetylcholine": {
+    "label": "Acétylcholine",
+    "color": "#c95f8e",
+    "role": "Mémoire, muscles, délire"
+  },
+  "histamine": {
+    "label": "Histamine",
+    "color": "#5b9ad4",
+    "role": "Éveil, allergie, sédation (anti-H1)"
+  }
+}

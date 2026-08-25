@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <title>TakoLogs — Savoir, réduction des risques & journal</title>
+    <meta
+      name="description"
+      content="TakoLogs : encyclopédie de substances, comparateur, réduction des risques et journal d'expériences."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="TakoLogs" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#c9704f" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap"
+    />
+    <script>
+      (function () {
+        try {
+          var h = localStorage.getItem("takologs-accent-hue") || "36";
+          var n = parseInt(h, 10);
+          if (!isFinite(n)) n = 36;
+          var r = document.documentElement;
+          var mono = n < 0;
+          r.classList.toggle("mono", mono);
+          if (mono) {
+            r.style.setProperty("--accent-h", "0");
+            r.style.setProperty("--clay-s", "0%");
+          } else {
+            n = ((n % 360) + 360) % 360;
+            r.style.setProperty("--accent-h", String(n));
+          }
+          var t = localStorage.getItem("takologs-theme") || "auto";
+          var hr = new Date().getHours();
+          var dark = t === "dark" || (t !== "light" && (hr >= 19 || hr < 7));
+          r.classList.toggle("dark", dark);
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-5LjpopHg.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/durable-store-BGQ2E3tj.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-C-Pyp7Ih.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

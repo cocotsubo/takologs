@@ -1,0 +1,49 @@
+{
+  "tips": [
+    {
+      "title": "Testez vos produits",
+      "text": "Utilisez un kit réactif (Ehrlich, Marquis, Mandelin) pour identifier la substance et détecter les adultérants dangereux."
+    },
+    {
+      "title": "Hydratez-vous, mais sans excès",
+      "text": "~500 ml d'eau par heure si vous dansez. Trop d'eau pure peut causer une hyponatrémie (MDMA)."
+    },
+    {
+      "title": "Set & setting",
+      "text": "L'état d'esprit et l'environnement déterminent largement l'expérience. Choisissez un lieu sûr et des personnes de confiance."
+    },
+    {
+      "title": "Ne mélangez pas les dépresseurs",
+      "text": "Alcool + benzo/opioïdes/GHB = dépression respiratoire. C'est la cause n°1 de surdose."
+    }
+  ],
+  "groups": [
+    {
+      "title": "Urgences & empoisonnement",
+      "items": [
+        { "name": "SAMU", "desc": "Urgence médicale vitale", "phone": "15", "hours": "24h/24" },
+        { "name": "Numéro européen d'urgence", "desc": "Urgences générales", "phone": "112", "hours": "24h/24" },
+        { "name": "Centre antipoison", "desc": "Intoxication, surdose, mauvais trip", "phone": "Centres régionaux", "hours": "24h/24" },
+        { "name": "SOS Médecins", "desc": "Consultation urgente à domicile", "phone": "3624", "hours": "24h/24" }
+      ]
+    },
+    {
+      "title": "Aide & écoute",
+      "items": [
+        { "name": "Drogues Info Service", "desc": "Informations, conseil, orientation", "phone": "0 800 23 13 36", "url": "https://www.drogues-info-service.fr", "hours": "7j/7, 8h–20h" },
+        { "name": "Écoute Alcool", "desc": "Aide face aux problèmes d'alcool", "phone": "0980 980 930", "url": "https://www.alcool-info-service.fr", "hours": "7j/7, 8h–20h" },
+        { "name": "Tabac Info Service", "desc": "Aide au sevrage tabagique", "phone": "3989", "url": "https://www.tabac-info-service.fr", "hours": "Lun–Sam" },
+        { "name": "Fil Santé Jeunes", "desc": "Écoute pour les moins de 25 ans", "phone": "32 24", "url": "https://www.filsantejeunes.com", "hours": "7j/7, 8h–minuit" },
+        { "name": "Suicide Écoute", "desc": "Écoute face à la détresse", "phone": "01 45 39 40 00", "url": "https://www.suicide-ecoute.fr", "hours": "24h/24" }
+      ]
+    },
+    {
+      "title": "Réduire les risques",
+      "items": [
+        { "name": "Asud", "desc": "Association d'auto-support des usagers de drogues", "url": "https://www.asud.fr" },
+        { "name": "AIDES", "desc": "Prévention, dépistage, réduction des risques", "url": "https://www.aides.fr" },
+        { "name": "Mémos de réduction des risques", "desc": "Guides pratiques par produit", "url": "https://www.drogues-info-service.fr" }
+      ]
+    }
+  ]
+}

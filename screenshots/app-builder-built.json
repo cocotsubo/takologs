@@ -1,0 +1,41 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "TakoLogs — Savoir, réduction des risques & journal",
+      "hasCanvas": false,
+      "bodyTextLen": 2226,
+      "bodyTextHash": "4d964c2ece773089eaaac4934253dd680906d7bc75e5b2dccb8bcd21797a188e",
+      "bodyTextPrefix": "TakoLogs Home Substances Compare Effects Neuro Harm scale Harm r",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "TakoLogs — Savoir, réduction des risques & journal",
+      "hasCanvas": false,
+      "bodyTextLen": 2146,
+      "bodyTextHash": "85c00f6fc25a11e657ac9255fc572f5fc60edd5f514be4be0531cd84de90580b",
+      "bodyTextPrefix": "Knowledge · Harm reduction · Personal journal Explore substances",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text replaced (similar length, page start changed)",
+    "mobile: body text replaced (similar length, page start changed)"
+  ]
+}
