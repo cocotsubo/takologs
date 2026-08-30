@@ -1,6 +1,6 @@
 # Télécharger une ancienne version de TakoLogs
 
-Chaque version a une **pull request** (notes + zip de la branche) et une **release GitHub**.
+Chaque version a une **release GitHub** (zip FTP quand il existe). Les versions 1.0–20.7 ont aussi une **pull request** et une branche `release/vX.Y`.
 
 - [Toutes les releases](https://github.com/cocotsubo/takologs/releases)
 - [Toutes les pull requests](https://github.com/cocotsubo/takologs/pulls?q=is%3Apr+label%3Aversion)
@@ -12,11 +12,14 @@ Pour installer : télécharge le zip → décompresse → envoie le contenu (`in
 | Version | Fichier |
 |---|---|
 | **v24.0** (actuelle) | [TakoLogs-v24.0.zip](https://github.com/cocotsubo/takologs/releases/download/v24.0/TakoLogs-v24.0.zip) |
-| **v21.9.7-beta** | [TakoLogs-v21.9.7-beta.zip](https://github.com/cocotsubo/takologs/releases/download/v21.9.7-beta/TakoLogs-v21.9.7-beta.zip) |
+| **v23.0** | [TakoLogs-v23.0.zip](https://github.com/cocotsubo/takologs/releases/download/v23.0/TakoLogs-v23.0.zip) |
+| **v22.0** | [TakoLogs-v22.0.zip](https://github.com/cocotsubo/takologs/releases/download/v22.0/TakoLogs-v22.0.zip) |
 | **v21.4** | [TakoLogs-v21.4.zip](https://github.com/cocotsubo/takologs/releases/download/v21.4/TakoLogs-v21.4.zip) |
 | **v20.6** | [TakoLogs.zip](https://github.com/cocotsubo/takologs/releases/download/v20.6/TakoLogs.zip) |
 | **v13.0** | [TakoLogs-v13.zip](https://github.com/cocotsubo/takologs/releases/download/v13.0/TakoLogs-v13.zip) |
 | **v1.0** (Bolt) | [TakoLogs-v1-bolt.zip](https://github.com/cocotsubo/takologs/releases/download/v1.0/TakoLogs-v1-bolt.zip) |
+
+Les bêtas Grok (21.9.x, 21.10.x, 22.x) sont en [prerelease](https://github.com/cocotsubo/takologs/releases).
 
 ## Toutes les versions
 
@@ -24,16 +27,40 @@ Pour installer : télécharge le zip → décompresse → envoie le contenu (`in
 |---|---|---|---|---|
 | **v24.0** | FTP Grok (corrige) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v24.0/TakoLogs-v24.0.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v24.0) |
 | **v23.0** | FTP Grok | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v23.0/TakoLogs-v23.0.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v23.0) |
+| **v22.9-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v22.9-beta/TakoLogs-22.9_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v22.9-beta) |
+| **v22.8-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v22.8-beta/TakoLogs-22.8_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v22.8-beta) |
+| **v22.7-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v22.7-beta/TakoLogs-22.7_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v22.7-beta) |
+| **v22.6-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v22.6-beta/TakoLogs-22.6_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v22.6-beta) |
+| **v22.5-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v22.5-beta/TakoLogs-22.5_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v22.5-beta) |
+| **v22.4-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v22.4-beta/TakoLogs-22.4_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v22.4-beta) |
+| **v22.3-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v22.3-beta/TakoLogs-22.3_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v22.3-beta) |
+| **v22.2-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v22.2-beta/TakoLogs-22.2_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v22.2-beta) |
+| **v22.1-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v22.1-beta/TakoLogs-22.1_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v22.1-beta) |
 | **v22.0** | FTP Grok | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v22.0/TakoLogs-v22.0.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v22.0) |
+| **v22.0-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v22.0-beta/TakoLogs-22.0_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v22.0-beta) |
+| **v21.10.5-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.10.5-beta/TakoLogs-21.10.5_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.10.5-beta) |
+| **v21.10.4-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.10.4-beta/TakoLogs-21.10.4_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.10.4-beta) |
+| **v21.10.3-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.10.3-beta/TakoLogs-21.10.3_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.10.3-beta) |
+| **v21.10.2-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.10.2-beta/TakoLogs-21.10.2_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.10.2-beta) |
+| **v21.10.1-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.10.1-beta/TakoLogs-21.10.1_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.10.1-beta) |
+| **v21.10.0-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.10.0-beta/TakoLogs-21.10.0_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.10.0-beta) |
+| **v21.9.9-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.9.9-beta/TakoLogs-21.9.9_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.9.9-beta) |
+| **v21.9.8-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.9.8-beta/TakoLogs-21.9.8_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.9.8-beta) |
 | **v21.9.7-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.9.7-beta/TakoLogs-v21.9.7-beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.9.7-beta) |
+| **v21.9.6-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.9.6-beta/TakoLogs-21.9.6_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.9.6-beta) |
+| **v21.9.5-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.9.5-beta/TakoLogs-21.9.5_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.9.5-beta) |
+| **v21.9.4-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.9.4-beta/TakoLogs-21.9.4_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.9.4-beta) |
+| **v21.9.3-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.9.3-beta/TakoLogs-21.9.3_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.9.3-beta) |
+| **v21.9.2-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.9.2-beta/TakoLogs-21.9.2_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.9.2-beta) |
+| **v21.9.1-beta** | FTP Grok (bêta) | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.9.1-beta/TakoLogs-21.9.1_beta.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.9.1-beta) |
 | **v21.9** | FTP Grok | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.9/TakoLogs-v21.9.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.9) |
 | **v21.8** | FTP Grok | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.8/TakoLogs-v21.8.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.8) |
 | **v21.7** | FTP Grok | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.7/TakoLogs-v21.7.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.7) |
 | **v21.6** | FTP Grok | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.6/TakoLogs-v21.6.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.6) |
 | **v21.5** | FTP Grok | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.5/TakoLogs-v21.5.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.5) |
+| **v21.4** | Publication Grok | 2026-08 | `release/v21.4` | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.4/TakoLogs-v21.4.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.4) |
 | **v21.3** | FTP Grok | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.3/TakoLogs-v21.3.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.3) |
 | **v21.2** | FTP Grok | 2026-08 | — | [zip](https://github.com/cocotsubo/takologs/releases/download/v21.2/TakoLogs-v21.2.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.2) |
-| **v21.4** | Publication Grok | 2026-08 | `release/v21.4` | [branche](https://github.com/cocotsubo/takologs/archive/refs/heads/release/v21.4.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.4) |
 | **v21.1** | Fiches PW traduites | 2026-08 | `release/v21.1` | [branche](https://github.com/cocotsubo/takologs/archive/refs/heads/release/v21.1.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.1) |
 | **v21.0** | API PsychonautWiki | 2026-08 | `release/v21.0` | [branche](https://github.com/cocotsubo/takologs/archive/refs/heads/release/v21.0.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v21.0) |
 | **v20.9** | Fiches, notes, TakoAI, médicaments | 2026-08 | `release/v20.9` | [branche](https://github.com/cocotsubo/takologs/archive/refs/heads/release/v20.9.zip) · [release](https://github.com/cocotsubo/takologs/releases/tag/v20.9) |
