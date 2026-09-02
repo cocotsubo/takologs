@@ -1,7 +1,18 @@
-# Changelog TakoLogs
+# Changelog
 
-### v20.7 — Versions automatiques (2026-08)
+## 28.0 — production (2026-09)
 
-- Bump +0.1, changelog, zip FTP, pull request et release GitHub créés automatiquement.
-- Action GitHub : lancer une version depuis l’onglet Actions, ou au push de version.ts.
+- Sortie du canal bêta sur le produit principal
+- Menu hamburger groupé, 18 pages, filtre
+- Blog RdR éditorial (14 articles), barre de lecture
+- TakoLabs `/beta` : salle blanche, récepteurs, mode silence, films
+- Pastilles de dernière dose à l’ajout d’ingestion
+- Plage horaire, import Apple Santé, PDF, favoris, export JSON local
 
+## 27.4
+
+Dock persistante (héritage PWA)
+
+## 23.5
+
+Base PWA liquid glass
